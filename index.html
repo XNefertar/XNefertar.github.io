@@ -1,1142 +1,819 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="The Redefine Team">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://xnefertar.github.io/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://xnefertar.github.io/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
+<meta property="article:author" content="XNefertar">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>Hexo</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
+<meta name="twitter:image" content="http://xnefertar.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Theme Redefine - Redefine Your Hexo Journey.
+        
+    </title>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+    <!--- Inject Part-->
+    
 
-          <div class="content index posts-expand">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"xnefertar.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"atom-one-light","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"XNefertar's Blog","subtitle":{"text":["Hello World!"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+	
+    <style>
+        .home-banner-container {
+            background: none !important;
+        }
+        .home-article-item,
+        .sidebar-links,
+        .sidebar-content,
+        a.page-number,
+        a.extend,
+        .sidebar-links .links:hover,
+        .right-bottom-tools,
+        footer.footer {
+            background-color: var(--background-color-transparent-80) !important;
+        }
+        .right-bottom-tools:hover,
+        a.page-number:hover,
+        a.extend:hover {
+            background-color: var(--primary-color) !important;
+        }
+        .site-info,
+        .home-article-sticky-label {
+            background-color: var(--background-color-transparent-15) !important;
+        }
+        .home-article-sticky-label {
+            backdrop-filter: none !important;
+        }
+    </style>
+    <div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
+        <img src="/images/wallhaven-wqery6-light.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
+        <img src="/images/wallhaven-wqery6-dark.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
+    </div>
+
+
+<div class="home-banner-container flex justify-center items-center transition-fade relative">
+    
+    <div class="content mt-8 flex flex-col justify-center items-center transition-fade-down">
+        <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
+        
+        >
+            XNefertar's Blog
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/05/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/05/05/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2025-05-05 12:54:25" itemprop="dateCreated datePublished" datetime="2025-05-05T12:54:25+08:00">2025-05-05</time>
-            </span>
-
-          
-
+            
+                <p><i id="subtitle"></i></p>
+            
         </div>
-      </header>
+        
+    </div>
+    <script>
+        const scrollToMain = ()=> {
+            console.log('scroll');
+            const target = document.querySelector('.main-content-container');
+            target.scrollIntoView({ behavior: 'smooth'});
+        }
+    </script>
+</div>
+	
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar has-home-banner">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                <h1>
+                Theme Redefine
+                </h1>
+            </a>
+        </div>
 
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active"
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/05/Linux_Advanced_IO_Multiplexing/">
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
+                        
+                    </li>
+            
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/12/05/Linux_Advanced_IO_Multiplexing/" class="post-title-link" itemprop="url">Linux_Advanced_IO_Multiplexing</a>
-        </h2>
+            
+            
+        </ul>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-12-05 13:26:00" itemprop="dateCreated datePublished" datetime="2024-12-05T13:26:00+08:00">2024-12-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-05-05 13:41:04" itemprop="dateModified" datetime="2025-05-05T13:41:04+08:00">2025-05-05</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Linux-网络高级-IO"><a href="#Linux-网络高级-IO" class="headerlink" title="Linux 网络高级 IO"></a>Linux 网络高级 IO</h1><h2 id="五种IO模型"><a href="#五种IO模型" class="headerlink" title="五种IO模型"></a>五种IO模型</h2><blockquote>
-<p>本文将介绍Linux网络编程中的五种常见网络高级IO函数</p>
-<ol>
-<li>阻塞IO<ol>
-<li>在内核将数据准备好之前, 系统调用会一直等待. </li>
-<li>所有的套接字, 默认都是阻塞方式.</li>
-</ol>
-</li>
-<li>非阻塞IO<ol>
-<li>如果内核还未将数据准备好, 系统调用仍然会直接返回</li>
-<li>返回EWOULDBLOCK错误码.</li>
-<li>该IO模式常需要以循环的方式反复尝试读写文件描述符, 这个过程称为<code>轮询</code></li>
-<li>但是<code>轮询</code>会带来大量的CPU资源浪费，所以该IO模式一般只在特定场景下应用</li>
-</ol>
-</li>
-<li>信号驱动IO<ol>
-<li>内核将数据准备好的时候, 使用SIGIO信号通知应用程序进行IO操作</li>
-</ol>
-</li>
-<li>IO多路转接<ol>
-<li>类似于阻塞IO,</li>
-<li>最核心在于IO多路转接能够同时等待多个文件 描述符的就绪状态</li>
-</ol>
-</li>
-<li>异步IO<ol>
-<li>在数据拷贝完成时, 内核会通知应用程序</li>
-<li>信号驱动则是告诉应用程序何时可以开始拷贝数据</li>
-</ol>
-</li>
-</ol>
-<p>总结：</p>
-<p>所有的IO均可看作<code>等待</code> + <code>拷贝</code>，其中<code>等待</code>的时间常常远高于<code>拷贝</code>，所以高效的IO模式都是尽量减少等待的时间（后面会具体介绍）;</p>
-</blockquote>
-<h2 id="高级IO重要概念"><a href="#高级IO重要概念" class="headerlink" title="高级IO重要概念"></a>高级IO重要概念</h2><h3 id="同步通信-synchronous-communication-VS-异步通信-asynchronous-communication"><a href="#同步通信-synchronous-communication-VS-异步通信-asynchronous-communication" class="headerlink" title="同步通信 (synchronous communication) VS 异步通信 (asynchronous communication)"></a>同步通信 (synchronous communication) VS 异步通信 (asynchronous communication)</h3><p>同步和异步关注的是消息通信机制：</p>
-<blockquote>
-<ul>
-<li>同步</li>
-</ul>
-<p>直接由调用者进行等待，在处理完成之前，调用者会一直等待该处理结果的返回，期间调用者不会进行其他的操作；</p>
-<ul>
-<li>异步</li>
-</ul>
-<p>调用者不会一直进行阻塞式等待，当处理完成后，被调用者会通过一系列的机制（回调函数、信号等）通知调用者，调用者收到对应的完成信号后执行后续操作；</p>
-</blockquote>
-<p>然而，需要注意与多进程&#x2F;多线程同步&#x2F;互斥的区别，两者毫不相关：</p>
-<blockquote>
-<ul>
-<li><p>进程&#x2F;线程同步也是进程&#x2F;线程之间直接的制约关系</p>
-</li>
-<li><p>是为完成某种任务而建立的两个或多个线程，这个线程需要在某些位置上协调他们的工作次序而等待、 传递信息所产生的制约关系. 尤其是在访问临界资源的时候</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="阻塞-VS-非阻塞"><a href="#阻塞-VS-非阻塞" class="headerlink" title="阻塞 VS 非阻塞"></a>阻塞 VS 非阻塞</h3><p>阻塞和非阻塞关注的是程序在等待调用结果（消息，返回值）时的状态</p>
-<blockquote>
-<ul>
-<li>阻塞调用是指调用结果返回之前，对应的线程会被挂起，直到收到响应信号时才会返回；</li>
-<li>非阻塞则不同于阻塞，即使未收到响应信号，线程也不会被挂起，而是继续执行接下来的操作；</li>
-</ul>
-</blockquote>
-<h3 id="其他高级IO"><a href="#其他高级IO" class="headerlink" title="其他高级IO"></a>其他高级IO</h3><p>非阻塞IO，纪录锁，系统V流机制，I&#x2F;O多路转接（也叫I&#x2F;O多路复用）,readv和writev函数以及存储映射 IO（mmap），这些统称为高级IO<br>本文重点讨论 I&#x2F;O 多路转接；</p>
-<h2 id="非阻塞IO"><a href="#非阻塞IO" class="headerlink" title="非阻塞IO"></a>非阻塞IO</h2><h3 id="fcntl"><a href="#fcntl" class="headerlink" title="fcntl"></a>fcntl</h3><p>文件描述符控制函数，默认是阻塞 IO</p>
-<p><strong>函数原型</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">fcntl</span><span class="params">(<span class="type">int</span> fd, <span class="type">int</span> cmd, ... <span class="comment">/* arg */</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数说明</strong></p>
-<p><em>cmd</em></p>
-<blockquote>
-<p>F_DUPFD：										  复制一个现有的描述符</p>
-<p>F_GETFD &#x2F; F_SETFD： 					  获得&#x2F;设置文件描述符标记</p>
-<p>F_GETFL &#x2F; F_SETFL： 					   获得&#x2F;设置文件状态标记</p>
-<p>F_GETOWN &#x2F; F_SETOWN：			   获得&#x2F;设置异步I&#x2F;O所有权</p>
-<p>F_GETLK &#x2F; F_SETLK &#x2F; F_SETLKW： 获得&#x2F;设置记录锁</p>
-</blockquote>
-<p><strong>用法实例</strong></p>
-<p>——以设置文件描述符为非阻塞模式为例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">SetNoBlock</span><span class="params">(<span class="type">int</span> fd)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 获取当前文件描述符模式</span></span><br><span class="line">    <span class="type">int</span> flag = <span class="built_in">fcntl</span>(fd, F_GETFL);</span><br><span class="line">    <span class="keyword">if</span>(flag &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        std::cerr &lt;&lt; <span class="string">&quot;ERROR FD&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 设置文件描述符为非阻塞模式</span></span><br><span class="line">    <span class="built_in">fcntl</span>(fd, F_SETFL, flag | O_NONBLOCK);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em>细节</em></p>
-<p>这里获取的<code>flag</code>，请注意它是一个位图结构，关于位图结构，可以粗略的将它看作是一个_比特位容器_，每个位置上的0&#x2F;1值都代表着不同的含义，当然位图的实现依据不同的功能有不同的实现方案，肯定不会只是一个简单的<code>int</code>类型可表示的，这里只是用作理解；</p>
-<p><strong>以轮询方式读取标准输入</strong></p>
-<p>在我们完成了上述的非阻塞模式设置函数后，我们就可以基于此实现<code>以轮询方式读取标准输入</code>的功能：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">SetNoBlock</span><span class="params">(<span class="type">int</span> fd)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 获取当前文件描述符模式</span></span><br><span class="line">    <span class="type">int</span> flag = <span class="built_in">fcntl</span>(fd, F_GETFL);</span><br><span class="line">    <span class="keyword">if</span>(flag &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        std::cerr &lt;&lt; <span class="string">&quot;ERROR FD&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 设置文件描述符为非阻塞模式</span></span><br><span class="line">    <span class="built_in">fcntl</span>(fd, F_SETFL, flag | O_NONBLOCK);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 标准输入的文件描述符默认是0</span></span><br><span class="line">    <span class="comment">// 1 -&gt; 标准输出</span></span><br><span class="line">    <span class="comment">// 2 -&gt; 标准错误</span></span><br><span class="line">    <span class="built_in">SetNoBlock</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="comment">// 死循环模拟轮询状态</span></span><br><span class="line">    <span class="keyword">for</span>(;;)</span><br><span class="line">    &#123;</span><br><span class="line">		<span class="type">char</span> buffer[<span class="number">1024</span>];</span><br><span class="line">        <span class="comment">// 读取</span></span><br><span class="line">        <span class="comment">// 以非阻塞方式</span></span><br><span class="line">        <span class="type">ssize_t</span> s = <span class="built_in">read</span>(<span class="number">0</span>, buffer, <span class="built_in">sizeof</span>(buffer) - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(s &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            std::cerr &lt;&lt; <span class="string">&quot;ERROR READ&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">            <span class="built_in">sleep</span>(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;GetInput # &quot;</span> &lt;&lt; buffer &lt;&lt; std::endl; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="I-O多路转接"><a href="#I-O多路转接" class="headerlink" title="I&#x2F;O多路转接"></a>I&#x2F;O多路转接</h1><p>什么是多路转接：通俗的理解就是多个信号或数据流共享一条通信管道，通过各种机制（如信号）实现数据的有序传递，下面分别介绍几种常见的通信机制：</p>
-<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><h3 id="初识select"><a href="#初识select" class="headerlink" title="初识select"></a>初识select</h3><p>系统提供select函数来实现多路复用输入&#x2F;输出模型</p>
-<blockquote>
-<ul>
-<li><p>select系统调用是用来让我们的程序监视多个文件描述符的状态变化的；</p>
-</li>
-<li><p>程序会停在select这里等待，直到被监视的文件描述符有一个或多个发生了状态改变</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="select-函数原型"><a href="#select-函数原型" class="headerlink" title="select 函数原型"></a>select 函数原型</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">select</span><span class="params">(<span class="type">int</span> nfds, fd_set *readfds, fd_set *writefds,</span></span></span><br><span class="line"><span class="params"><span class="function"> 		  fd_set *exceptfds, <span class="keyword">struct</span> timeval *timeout)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数解释</strong></p>
-<blockquote>
-<ul>
-<li>nfds：最大的可用文件描述符 + 1；</li>
-<li>readfds：监听读事件的文件描述符的集合，这里的 fd_set 即表示一个文件描述符集合；</li>
-<li>writefds：同上，表示被监听的写事件的文件描述符集合；</li>
-<li>exceptfds：同上，表示被监听的异常事件的文件描述符集合；</li>
-<li>timeout：用来设置 select 的超时时间（用来区分非阻塞和阻塞模式）</li>
-</ul>
-</blockquote>
-<p><strong>timeout 取值</strong></p>
-<blockquote>
-<ul>
-<li>NULL：则表示 select 没有timeout，select将一直被阻塞，直到某个文件描述符上发生了事件； ——阻塞等待</li>
-<li>0：仅检测描述符集合的状态，然后立即返回，并不等待外部事件的发生； ——非阻塞等待</li>
-<li>特定的时间值：如果在指定的时间段里没有事件发生，select将超时返回； ——超时时间内阻塞，超时时间外非阻塞</li>
-</ul>
-</blockquote>
-<p><strong>fd_set</strong></p>
-<p>位图结构，对应的位标识所监视的文件描述符；</p>
-<blockquote>
-<p>操作函数（位图结构不是简单类型，不可以通过位运算进行直接操作）</p>
-<ul>
-<li>void FD_CLR(int fd, fd_set *set);  &#x2F;&#x2F; 用来清除描述词组set中相关fd 的位 </li>
-<li>int FD_ISSET(int fd, fd_set *set);  &#x2F;&#x2F; 用来测试描述词组set中相关fd的位是否为真 </li>
-<li>void FD_SET(int fd, fd_set *set);  &#x2F;&#x2F; 用来设置描述词组set中相关fd的位 </li>
-<li>void FD_ZERO(fd_set *set);         &#x2F;&#x2F; 用来清除描述词组set的全部位</li>
-</ul>
-</blockquote>
-<p><strong>返回值</strong></p>
-<blockquote>
-<ul>
-<li>执行成功则返回文件描述词状态已改变的个数 </li>
-<li>如果返回0代表在描述词状态改变前已超过timeout时间，没有返回</li>
-<li>当有错误发生时则返回-1，错误原因存于errno，此时参数 readfds, writefds, exceptfds 和 timeout 的值变成不可预测；</li>
-</ul>
-</blockquote>
-<p><em>常见错误值</em></p>
-<blockquote>
-<ul>
-<li>EBADF 文件描述词为无效的或该文件已关闭</li>
-<li>EINTR 此调用被信号所中断</li>
-<li>EINVAL 参数 n 为负值</li>
-<li>ENOMEM 核心内存不足</li>
-</ul>
-</blockquote>
-<h3 id="select-函数执行过程"><a href="#select-函数执行过程" class="headerlink" title="select 函数执行过程"></a>select 函数执行过程</h3><p>理解select函数执行过程，需要与其操作函数相结合，这里以一个字节（8位）位图为例：</p>
-<blockquote>
-<ol>
-<li>首先重置位图结构—— FD_ZERO，位图变为 (0000 0000)；</li>
-<li>再设置需要监听的文件描述符，这里以 fd &#x3D; 4为例—— FD_SET(4, &amp;fd_set); (0001 0000)</li>
-<li>当监听到对应的文件描述符上由事件就绪时（事件类型由对应的文件描述符集合确定，这里是阻塞等待），fd_set被重新设置，对应位上的值被置为1，而监听的文件描述符若未就绪，则会被置为0；(0001 0000)</li>
-<li>接收端读取select返回的信号，检索fd_set，执行相应操作；</li>
-</ol>
-</blockquote>
-<h3 id="select-就绪条件"><a href="#select-就绪条件" class="headerlink" title="select 就绪条件"></a>select 就绪条件</h3><p><strong>读就绪</strong></p>
-<blockquote>
-<ul>
-<li>socket内核中, 接收缓冲区中的字节数, 大于等于低水位标记SO_RCVLOWAT. 此时可以无阻塞的读该文件描述符, 并且返回值大于0；</li>
-<li>socket TCP通信中, 对端关闭连接, 此时对该socket读, 则返回0；</li>
-<li>监听的socket上有新的连接请求；</li>
-</ul>
-</blockquote>
-<p><strong>写就绪</strong></p>
-<blockquote>
-<ul>
-<li>socket 内核中, 发送缓冲区中的可用字节数(发送缓冲区的空闲位置大小), 大于等于低水位标记 SO_SNDLOWAT, 此时可以无阻塞的写, 并且返回值大于0；</li>
-<li>socket的写操作被关闭(close或者shutdown). 对一个写操作被关闭的socket进行写操作, 会触发SIGPIPE 信号；</li>
-<li>socket使用非阻塞connect连接成功或失败之后；</li>
-</ul>
-</blockquote>
-<p><strong>异常就绪</strong></p>
-<blockquote>
-<ul>
-<li>连接中断或重置，常见异常为<code>ECONNRESET</code>；</li>
-<li>对端正常关闭连接，此时如果对 socket 进行写操作，会触发<code>EPIPE</code>或<code>ECONNRESET</code>错误；</li>
-<li>网络故障或不可达，通常发生在TCP或UDP中，可能表现为连接被重置；</li>
-<li>非阻塞模式下，缓冲区已满或没有数据可读，socket 处于异常状态；</li>
-<li>使用<code>shutdown()</code>后的读写操作，可能会导致后续操作失败，进入异常状态；</li>
-<li>资源不足或系统错误，如内存不足或文件描述符耗尽，会导致进入异常状态；</li>
-<li>SSL &#x2F; TLS 连接中的异常，在该协议下，任何连接中的异常都会使 socket 进入异常状态；</li>
-</ul>
-</blockquote>
-<h3 id="select-的特点"><a href="#select-的特点" class="headerlink" title="select 的特点"></a>select 的特点</h3><ul>
-<li><p>可监控的文件描述符取决于<code>sizeof(fd_set)</code>的大小，以我自己的系统为例，<code>sizeof(fd_set)</code>大小为128 bytes，而每一位都可以标识一个文件描述符，所以可监控的文件描述符为<code>128 * 8 = 1024</code>；</p>
-<blockquote>
-<p>fd_set 的大小可以调整，具体方法可能涉及重新编译内核；</p>
-</blockquote>
-</li>
-<li><p>将 fd 加入监控集的同时，还要再使用一个数据结构 array 保存到 select 监控集合中的 fd</p>
-<ul>
-<li>一是用于再select 返回后，array作为源数据和fd_set进行FD_ISSET判断；</li>
-<li>二是select返回后会把以前加入的但并无事件发生的fd清空，则每次开始select前都要重新从array取得 fd 逐一加入(FD_ZERO最先)，扫描array的同时取得fd最大值maxfd，用于select的第一个参数；</li>
-</ul>
-</li>
-</ul>
-<h3 id="select-的缺点"><a href="#select-的缺点" class="headerlink" title="select 的缺点"></a>select 的缺点</h3><blockquote>
-<ul>
-<li><p>每次调用select, 都需要手动设置fd集合, 从接口使用角度来说也非常不便；</p>
-</li>
-<li><p>每次调用select，都需要把fd集合从用户态拷贝到内核态，这个开销在fd很多时会很大；</p>
-<blockquote>
-<p>用户无法对内核数据进行直接操作，所有的操作都是操作系统通过对应的文件描述符对对应的资源进行操作；</p>
-</blockquote>
-</li>
-<li><p>每次调用select都需要在内核遍历传递进来的所有fd，这个开销在fd很多时也很大；</p>
-</li>
-<li><p>select支持的文件描述符数量太小；</p>
-</li>
-</ul>
-</blockquote>
-<h3 id="select-的使用实例（检测标准输入输出）"><a href="#select-的使用实例（检测标准输入输出）" class="headerlink" title="select 的使用实例（检测标准输入输出）"></a>select 的使用实例（检测标准输入输出）</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    fd_set read_fds;</span><br><span class="line">    <span class="built_in">FD_ZERO</span>(&amp;read_fds);</span><br><span class="line">    <span class="built_in">FD_SET</span>(<span class="number">0</span>, &amp;read_fds);</span><br><span class="line">	<span class="keyword">for</span>(;;)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;&gt; &quot;</span>);</span><br><span class="line">        <span class="built_in">fflush</span>(stdout);</span><br><span class="line">    	<span class="type">int</span> ret = <span class="built_in">select</span>(<span class="number">1</span>, &amp;read_fds, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line">        <span class="keyword">if</span>(ret &lt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="built_in">perror</span>(<span class="string">&quot;SELECT&quot;</span>);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">FD_ISSET</span>(<span class="number">0</span>, &amp;read_fds))&#123;</span><br><span class="line">		   <span class="type">char</span> buffer[<span class="number">1024</span>]&#123;&#125;;</span><br><span class="line">        	<span class="built_in">read</span>(<span class="number">0</span>, buffer, <span class="built_in">sizeof</span>(buffer), <span class="number">0</span>);</span><br><span class="line">            std::cout &lt;&lt; <span class="string">&quot;input # &quot;</span> &lt;&lt; buffer;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            std::cout &lt;&lt; <span class="string">&quot;ERROR, INVALID FD!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="built_in">FD_ZERO</span>(&amp;read_fds);</span><br><span class="line">    	<span class="built_in">FD_SET</span>(<span class="number">0</span>, &amp;read_fds);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>该程序只检测标准输入（对应的文件描述符为0），当一直不输入时，就会产生超时信息；</p>
-</blockquote>
-<h2 id="poll"><a href="#poll" class="headerlink" title="poll"></a>poll</h2><p>鉴于<code>select</code>带来的较大的拷贝开销和遍历成本，又提出了一种新的多路转接方式——<strong>poll</strong>；</p>
-<h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;poll.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">poll</span><span class="params">(<span class="keyword">struct</span> pollfd *fds, <span class="type">nfds_t</span> nfds, <span class="type">int</span> timeout)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// pollfd结构</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">pollfd</span> &#123;</span><br><span class="line">	<span class="type">int</span> fd; 	   <span class="comment">/* file descriptor */</span></span><br><span class="line">	<span class="type">short</span> events;  <span class="comment">/* requested events */</span></span><br><span class="line">	<span class="type">short</span> revents; <span class="comment">/* returned events */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
-<li><p>fds：指向<code>pollfd</code>结构体的指针</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pollfd结构</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">pollfd</span> &#123;</span><br><span class="line">	<span class="type">int</span> fd; 	   <span class="comment">// 当前结构体所监视的文件描述符</span></span><br><span class="line">	<span class="type">short</span> events;  <span class="comment">// 当前文件描述符锁关心的时间，具体类型有:</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">		POLLIN：表示文件描述符可以进行读取操作（即有数据可读）。</span></span><br><span class="line"><span class="comment">		POLLOUT：表示文件描述符可以进行写入操作（即可以写数据）。</span></span><br><span class="line"><span class="comment">		POLLERR：表示文件描述符发生错误。</span></span><br><span class="line"><span class="comment">		POLLHUP：表示文件描述符被挂起，通常是连接关闭。</span></span><br><span class="line"><span class="comment">		POLLNVAL：表示文件描述符无效。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">	<span class="type">short</span> revents; <span class="comment">// 返回的事件类型，poll 返回时会修改这个字段，告知哪些事件已经发生</span></span><br><span class="line">    			  <span class="comment">// 返回值是 events 字段中感兴趣的事件，或者是一些错误事件</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>nfds：表示当前所监视的文件描述符个数，即结构体指针指向的结构体个数</p>
-</li>
-<li><p>timout：</p>
-<blockquote>
-<p>这是 <code>poll</code> 等待事件发生的最大时间，单位是毫秒。</p>
-<p><code>timeout</code> 的值可以是以下几种：</p>
-<ul>
-<li><strong>大于 0</strong>：表示等待事件发生的最长时间（毫秒）。<code>poll</code> 会在超时之前返回，或者在事件发生时返回。</li>
-<li><strong>0</strong>：表示非阻塞模式，<code>poll</code> 不会阻塞，立即返回。如果没有事件发生，则 <code>revents</code> 字段会被设置为 0。</li>
-<li><strong>-1</strong>：表示无限期等待，<code>poll</code> 将会一直阻塞直到某个事件发生。</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<h4 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h4><ul>
-<li>返回值小于0, 表示出错；</li>
-<li>返回值等于0, 表示poll函数等待超时；</li>
-<li>返回值大于0, 表示poll由于监听的文件描述符就绪而返回</li>
-</ul>
-<h3 id="socket就绪条件"><a href="#socket就绪条件" class="headerlink" title="socket就绪条件"></a>socket就绪条件</h3><p>与<code>select</code>相同；</p>
-<h3 id="poll-的优点"><a href="#poll-的优点" class="headerlink" title="poll 的优点"></a>poll 的优点</h3><p>较<code>select</code>来说，省略了三套位图结构，而以一个结构体指针类型代替，优化了数据存储的结构；</p>
-<blockquote>
-<ol>
-<li>首先针对结构体提供了同一的操作接口，而不是<code>select</code>在循环中进行赋值操作；</li>
-<li>与<code>select</code>的位图数组（大小由fd_set限制，而该限制是硬限制，可以通过修改系统设置来更改）不同，<code>poll</code>依赖于结构体数组实现，所以理论上<code>poll</code>没有最大数量的限制；</li>
-</ol>
-</blockquote>
-<h3 id="poll-的缺点"><a href="#poll-的缺点" class="headerlink" title="poll 的缺点"></a>poll 的缺点</h3><ol>
-<li>尽管poll通过结构体指针实现了操作的统一，但是之后的查询就绪状态依然需要执行遍历操作，尤其是当监视的文件描述符数量较大时，会带来较大的性能消耗；</li>
-<li>内部使用数组维护，动态扩展和删除性能较差，系统需要重新构建一个<code>poll_fd</code>结构体数组，由此会带来较大的拷贝资源消耗；</li>
-</ol>
-<h3 id="poll-的使用实例（检测标准输入输出——ReadEvent-ListenEvent）"><a href="#poll-的使用实例（检测标准输入输出——ReadEvent-ListenEvent）" class="headerlink" title="poll 的使用实例（检测标准输入输出——ReadEvent &amp;&amp; ListenEvent）"></a>poll 的使用实例（检测标准输入输出——ReadEvent &amp;&amp; ListenEvent）</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;poll.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;netinet/in.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="comment">// TODO</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 在具体的实现类中需要将套接字相关操作封装</span></span><br><span class="line"><span class="comment">// 但是这里为了代码展示的完整性</span></span><br><span class="line"><span class="comment">// 直接在类中提供套接字创建、绑定、监听、accpet connections等操作</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PollServer</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> _listenFd;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">pollfd</span> *_readFdPtr;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">// 套接字相关操作</span></span><br><span class="line">    <span class="comment">// create socket</span></span><br><span class="line">    <span class="function">socketstatic <span class="type">int</span> <span class="title">Socket</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> fd = <span class="built_in">socket</span>(AF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">if</span> (fd &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cerr &lt;&lt; <span class="string">&quot;socket error&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Socket fd: &quot;</span> &lt;&lt; fd &lt;&lt; std::endl;</span><br><span class="line">        <span class="comment">// 设置端口复用</span></span><br><span class="line">        <span class="type">int</span> opt = <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">setsockopt</span>(fd, SOL_SOCKET, SO_REUSEADDR, &amp;opt, <span class="built_in">sizeof</span>(opt));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> fd;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// bind</span></span><br><span class="line">    <span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">Bind</span><span class="params">(<span class="type">int</span> fd, <span class="type">int</span> port)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">struct</span> <span class="title class_">sockaddr_in</span> addr;</span><br><span class="line">        <span class="built_in">memset</span>(&amp;addr, <span class="number">0</span>, <span class="built_in">sizeof</span>(addr));</span><br><span class="line">        addr.sin_family = AF_INET;</span><br><span class="line">        addr.sin_port = <span class="built_in">htons</span>(port);</span><br><span class="line">        addr.sin_addr.s_addr = INADDR_ANY;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">bind</span>(fd, (<span class="keyword">struct</span> sockaddr *)&amp;addr, <span class="built_in">sizeof</span>(addr)) &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cerr &lt;&lt; <span class="string">&quot;bind error&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Bind fd: &quot;</span> &lt;&lt; fd &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// listen</span></span><br><span class="line">    <span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">Listen</span><span class="params">(<span class="type">int</span> fd)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">listen</span>(fd, backlog) &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cerr &lt;&lt; <span class="string">&quot;listen error&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Listen fd: &quot;</span> &lt;&lt; fd &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// client accept</span></span><br><span class="line">	<span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">Accept</span><span class="params">(<span class="type">int</span> sock, std::string&amp; ip, <span class="type">uint16_t</span>&amp; port)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">struct</span>  <span class="title class_">sockaddr_in</span> addr;</span><br><span class="line">        <span class="type">socklen_t</span> len = <span class="built_in">sizeof</span>(addr);</span><br><span class="line">        <span class="type">int</span> fd = <span class="built_in">accept</span>(sock, (<span class="keyword">struct</span> sockaddr*)&amp;addr, &amp;len);</span><br><span class="line">        <span class="keyword">if</span>(fd &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cerr &lt;&lt; <span class="string">&quot;accept error&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        ip = <span class="built_in">inet_ntoa</span>(addr.sin_addr);</span><br><span class="line">        port = <span class="built_in">ntohs</span>(addr.sin_port);</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Accept fd: &quot;</span> &lt;&lt; fd &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span> fd;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="epoll"><a href="#epoll" class="headerlink" title="epoll"></a>epoll</h2><p>——Linux 2.6 版本下公认的性能最好的多路 I&#x2F;O 就绪通知方法</p>
-<h3 id="epoll-相关系统调用"><a href="#epoll-相关系统调用" class="headerlink" title="epoll 相关系统调用"></a>epoll 相关系统调用</h3><h4 id="epoll-create"><a href="#epoll-create" class="headerlink" title="epoll_create"></a>epoll_create</h4><p>创建一个<code>epoll</code>句柄；</p>
-<h5 id="函数原型-1"><a href="#函数原型-1" class="headerlink" title="函数原型"></a>函数原型</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/epoll.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">epoll_create</span><span class="params">(<span class="type">int</span> size)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h5 id="参数说明-1"><a href="#参数说明-1" class="headerlink" title="参数说明"></a>参数说明</h5><ul>
-<li>size：</li>
-</ul>
-<blockquote>
-<ul>
-<li><p>Linux 2.6.8 之前，<code>size</code> 参数用于指定内核为 epoll 实例分配的事件队列的大小。具体来说，它表示内核分配的事件数组的初始大小，即内核为该 epoll 实例保留的空间大小（以事件数量为单位）。如果事件的数量超过这个初始大小，内核会动态地扩展空间。</p>
-</li>
-<li><p>Linux 2.6.8 之后，size&#96; 参数的作用被弃用了；而内核根据实际需求来分配资源；</p>
-</li>
-</ul>
-</blockquote>
-<h5 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a>返回值</h5><ul>
-<li><p><strong>成功</strong>：返回一个非负整数，表示创建的 epoll 实例的文件描述符。</p>
-</li>
-<li><p><strong>失败</strong>：如果调用失败，返回 <code>-1</code>，并且设置 <code>errno</code> 以指示错误原因。</p>
-</li>
-</ul>
-<h4 id="epoll-ctl"><a href="#epoll-ctl" class="headerlink" title="epoll_ctl"></a>epoll_ctl</h4><p><code>epoll</code>的事件注册函数；</p>
-<h5 id="函数原型-2"><a href="#函数原型-2" class="headerlink" title="函数原型"></a>函数原型</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/epoll.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">epoll_ctl</span><span class="params">(<span class="type">int</span> epfd, <span class="type">int</span> op, <span class="type">int</span> fd, <span class="keyword">struct</span> epoll_event *_Nullable event)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h5 id="参数说明-2"><a href="#参数说明-2" class="headerlink" title="参数说明"></a>参数说明</h5><p>epfd：epoll_create 的返回值，即 epoll 的句柄；</p>
-<blockquote>
-<p>什么是句柄？</p>
-<ul>
-<li><p>句柄是对资源的抽象引用，用来间接操作资源而不暴露资源的内部细节。</p>
-</li>
-<li><p>它通常由操作系统或库分配，并通过特定的 API 来进行资源的管理和访问。</p>
-</li>
-<li><p>句柄的常见应用包括文件、窗口、数据库连接和图形对象等。</p>
-</li>
-<li><p>句柄和指针的区别在于，指针直接访问内存，而句柄是资源的抽象标识符，底层实现和资源管理由操作系统或库负责。</p>
-</li>
-</ul>
-</blockquote>
-<p>op：表示具体的操作，具体分为一下三个宏：</p>
-<ul>
-<li><p>EPOLL_CTL_ADD：注册新的fd到epfd中</p>
-</li>
-<li><p>EPOLL_CTL_MOD：修改已经注册的fd的监听事件</p>
-</li>
-<li><p>EPOLL_CTL_DEL：从epfd中删除一个fd；</p>
-</li>
-<li><p>fd：表示需要监听的文件描述符；</p>
-</li>
-<li><p>event：表示内核需要监听的具体事件；</p>
-</li>
-</ul>
-<p><em>struct epoll_event</em> 参数说明</p>
-<p>其具体的结构如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">union</span> <span class="title class_">epoll_data</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">void</span> *ptr;</span><br><span class="line">    <span class="type">int</span> fd;</span><br><span class="line">    <span class="type">uint32_t</span> u32;</span><br><span class="line">    <span class="type">uint64_t</span> u64;</span><br><span class="line">&#125;<span class="type">epoll_data_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">epoll_event</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">uint32_t</span> events;   <span class="comment">/* Epoll Event */</span></span><br><span class="line">    <span class="type">epoll_data_t</span> data; <span class="comment">/* User data variable */</span></span><br><span class="line">&#125;__EPOLL_PACKED;</span><br></pre></td></tr></table></figure>
-
-<p>events可以是下列宏的集合（因为是位图结构，所以支持位运算）</p>
-<blockquote>
-<ul>
-<li><p>EPOLLIN：表示对应的文件描述符可读（包括对端SOCKET正常关闭）</p>
-</li>
-<li><p>EPOLLOUT：表示对应的文件描述符可写</p>
-</li>
-<li><p>EPOLLPRI：表示对应的文件描述符有紧急的数据可读（这里应该表示有带外数据到来）</p>
-</li>
-<li><p>EPOLLERR：表示对应的文件描述符发生错误</p>
-</li>
-<li><p>EPOLLHUP：表示对应的文件描述符被挂断</p>
-</li>
-<li><p>EPOLLET ：将EPOLL设为边缘触发（Edge Triggered）模式，这是相对于水平触发（Level Triggered）来说的；</p>
-</li>
-<li><p>EPOLLONESHOT：只监听一次事件，当监听完这次事件之后，如果还需要继续监听这个socket的话，需要再次把这个socket加入到EPOLL队列里;</p>
-</li>
-</ul>
-</blockquote>
-<p><em>边缘触发 &amp;&amp; 水平触发</em></p>
-<ul>
-<li><p>边缘触发</p>
-<ul>
-<li><p><em>解释</em></p>
-<p>​    边缘触发是指当事件从未触发状态变为触发状态时，操作系统会通知应用程序一次。如果事件从未触发状态变为触发状态后，直到事件被清除（处理完成）之前，操作系统不会再通知应用程序。</p>
-<p>​    也就是说，只有事件的“变化”才会触发通知。</p>
-</li>
-<li><p><em>特点</em></p>
-<ul>
-<li><strong>一次性通知</strong>：只有当事件的状态从非触发变为触发时，才会发出通知，之后事件不会再重复通知，除非应用程序明确地清除事件的状态（比如读取数据）。</li>
-<li><strong>需要不断轮询</strong>：如果应用程序没有及时处理事件（例如，未读取网络数据），则需要不断地进行轮询或等待下一次事件通知。</li>
-</ul>
-</li>
-<li><p><em>应用场景</em></p>
-<p>​    边缘触发适用于对事件的处理非常迅速、并且应用程序能够及时清除事件状态的场景。</p>
-</li>
-</ul>
-</li>
-<li><p>水平触发</p>
-<ul>
-<li><p><em>解释</em></p>
-<p>​    水平触发是指，当事件处于触发状态时，操作系统会持续地通知应用程序，直到事件被处理完成并恢复到非触发状态。与边缘触发不同，水平触发会持续发出通知，直到应用程序处理了事件。</p>
-</li>
-<li><p><em>特点</em></p>
-<ul>
-<li><strong>持续通知</strong>：只要事件的状态仍然是触发状态，操作系统就会持续通知应用程序。应用程序必须处理事件（例如读取数据）才能清除触发状态。</li>
-<li><strong>不需要不断轮询</strong>：应用程序只需等待事件并处理它，而不需要担心遗漏重复的事件通知。</li>
-</ul>
-</li>
-<li><p>应用场景</p>
-<p>​    水平触发适用于事件状态可能持续存在的场景，且应用程序需要持续收到通知直到事件被处理的情况。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="epoll-wait"><a href="#epoll-wait" class="headerlink" title="epoll_wait"></a>epoll_wait</h4><p>收集在epoll监控的事件中已经发送的事件；</p>
-<h5 id="函数原型-3"><a href="#函数原型-3" class="headerlink" title="函数原型"></a>函数原型</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/epoll.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">epoll_wait</span><span class="params">(<span class="type">int</span> epfd, <span class="keyword">struct</span> epoll_event *events, <span class="type">int</span> maxevents, <span class="type">int</span> timeout)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h5 id="参数说明-3"><a href="#参数说明-3" class="headerlink" title="参数说明"></a>参数说明</h5><ul>
-<li><p>epfd:</p>
-<p><code>epoll</code>的文件描述符，表示一个<code>epoll</code>实例，内部维护了多个文件描述符遗迹这些描述符的相关事件；</p>
-</li>
-<li><p>events:</p>
-<p>一个指向<code>epoll_event</code>结构体数组的指针，用于存放<code>epoll_wait</code>返回的就绪事件；在调用 <code>epoll_wait</code> 时，系统会将就绪的事件写入这个数组。应用程序需要遍历这个数组，并处理每个就绪事件；</p>
-<blockquote>
-<p><code>struct epoll_event</code>的定义</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">epoll_event</span> &#123;</span><br><span class="line"><span class="type">uint32_t</span> events;  <span class="comment">// 事件类型（例如，EPOLLIN, EPOLLOUT等）</span></span><br><span class="line"><span class="type">epoll_data_t</span> data; <span class="comment">// 用户数据（通常用于存储文件描述符的相关信息）</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></blockquote>
-<ul>
-<li><strong><code>events</code></strong>：表示文件描述符的状态，<code>epoll_wait</code> 返回的事件类型，可能的值包括：<ul>
-<li><code>EPOLLIN</code>：表示文件描述符可读。</li>
-<li><code>EPOLLOUT</code>：表示文件描述符可写。</li>
-<li><code>EPOLLERR</code>：表示文件描述符发生错误。</li>
-<li><code>EPOLLHUP</code>：表示文件描述符挂起（例如，连接被断开）。</li>
-<li>其他事件，如 <code>EPOLLRDHUP</code>（TCP连接关闭通知）等。</li>
-</ul>
-</li>
-<li><strong><code>data</code></strong>：用户定义的数据，通常用于存储与文件描述符相关的信息。通过它可以区分不同的文件描述符或关联的业务逻辑。例如，存储一个指向自定义结构的指针，或者直接存储文件描述符本身。</li>
-</ul>
-</li>
-<li><p>maxevents</p>
-<p>这是 <code>events</code> 数组的大小，表示最多可以返回多少个就绪事件。<code>epoll_wait</code> 会返回最多 <code>maxevents</code> 个事件，这个数量不超过数组的大小;</p>
-</li>
-<li><p>timeout</p>
-<p>指定 <code>epoll_wait</code> 等待事件的最大时间，单位为毫秒。该参数控制 <code>epoll_wait</code> 的等待行为；</p>
-<ul>
-<li><strong><code>timeout = -1</code></strong>：表示无限等待，直到有一个或多个事件就绪为止。<code>epoll_wait</code> 会阻塞直到有文件描述符发生变化（例如，变为可读、可写，或者发生错误等）。</li>
-<li><strong><code>timeout = 0</code></strong>：表示非阻塞模式，<code>epoll_wait</code> 会立即返回，不会等待。它会检查所有注册的文件描述符的状态，如果没有就绪事件，会返回 <code>0</code>，表示当前没有文件描述符就绪。</li>
-<li><strong><code>timeout &gt; 0</code></strong>：表示最多等待 <code>timeout</code> 毫秒，如果在指定时间内有就绪事件，<code>epoll_wait</code> 会返回；如果没有就绪事件，则在超时后返回 <code>0</code>。</li>
-</ul>
-<p><strong>常见应用场景</strong>：</p>
-<ul>
-<li><code>timeout = -1</code>：常用于需要等待直到事件发生的场景，如网络服务器等待连接或数据到来。</li>
-<li><code>timeout = 0</code>：常用于非阻塞模式，通常在多线程或多任务的环境中，用来检查文件描述符的状态而不阻塞。</li>
-<li><code>timeout &gt; 0</code>：适用于需要定时轮询事件的场景，例如，应用程序需要定期检查文件描述符的状态，并在超时后执行一些其他任务。</li>
-</ul>
-</li>
-</ul>
-<h5 id="返回值-2"><a href="#返回值-2" class="headerlink" title="返回值"></a>返回值</h5><ul>
-<li><p><strong>成功</strong>：返回就绪的事件数量，表示有多少个文件描述符的事件发生了。这个数量可以小于或等于 <code>maxevents</code>，如果没有事件发生，则返回 <code>0</code>。如果有事件发生但返回的数量小于 <code>maxevents</code>，表示没有更多的就绪事件，程序可以继续处理其他任务。</p>
-</li>
-<li><p><strong>失败</strong>：返回 <code>-1</code>，并设置 <code>errno</code> 来指示错误。常见的错误码包括：</p>
-<ul>
-<li><strong><code>EINTR</code></strong>：系统调用被信号中断，需要重新调用 <code>epoll_wait</code>。</li>
-<li><strong><code>EBADF</code></strong>：<code>epfd</code> 不是一个有效的文件描述符。</li>
-<li><strong><code>EINVAL</code></strong>：无效的参数，可能是 <code>events</code> 为 NULL 或 <code>maxevents</code> 非法等。</li>
-</ul>
-</li>
-</ul>
-<h3 id="epoll完整代码实例"><a href="#epoll完整代码实例" class="headerlink" title="epoll完整代码实例"></a>epoll完整代码实例</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/epoll.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;netinet/in.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;arpa/inet.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义最大处理事件数</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_EVENTS 10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置套接字为非阻塞</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">set_nonblocking</span><span class="params">(<span class="type">int</span> fd)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> flags = <span class="built_in">fcntl</span>(fd, F_GETFL, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (flags == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">perror</span>(<span class="string">&quot;fcntl(F_GETFL)&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 调用 fcntl 函数进行设置</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">fcntl</span>(fd, F_SETFL, flags | O_NONBLOCK) == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">perror</span>(<span class="string">&quot;fcntl(F_SETFL)&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个TCP服务器并返回套接字</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">create_server_socket</span><span class="params">(<span class="type">int</span> port)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// socket function</span></span><br><span class="line">    <span class="type">int</span> server_fd = <span class="built_in">socket</span>(AF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (server_fd == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">perror</span>(<span class="string">&quot;socket&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">sockaddr_in</span> addr;</span><br><span class="line">    <span class="built_in">memset</span>(&amp;addr, <span class="number">0</span>, <span class="built_in">sizeof</span>(addr));</span><br><span class="line">    addr.sin_family = AF_INET;</span><br><span class="line">    addr.sin_addr.s_addr = INADDR_ANY;</span><br><span class="line">    addr.sin_port = <span class="built_in">htons</span>(port);</span><br><span class="line">	</span><br><span class="line">    <span class="comment">// bind function</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">bind</span>(server_fd, (<span class="keyword">struct</span> sockaddr *)&amp;addr, <span class="built_in">sizeof</span>(addr)) == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">perror</span>(<span class="string">&quot;bind&quot;</span>);</span><br><span class="line">        <span class="built_in">close</span>(server_fd);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// listen function</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">listen</span>(server_fd, <span class="number">10</span>) == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">perror</span>(<span class="string">&quot;listen&quot;</span>);</span><br><span class="line">        <span class="built_in">close</span>(server_fd);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">// return file_descriptor</span></span><br><span class="line">    <span class="keyword">return</span> server_fd;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 创建 epoll 文件描述符</span></span><br><span class="line">    <span class="comment">// epoll_create1 是 epoll_create 的增强版本</span></span><br><span class="line">    <span class="comment">// 其可接受一个 flags 标志位，用于指定一些额外行为</span></span><br><span class="line">    <span class="comment">// 这里参数传0值，表示使用默认行为模式</span></span><br><span class="line">    <span class="comment">// 和 epoll_create 行为一致</span></span><br><span class="line">    <span class="type">int</span> epfd = <span class="built_in">epoll_create1</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (epfd == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">perror</span>(<span class="string">&quot;epoll_create1&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建并设置非阻塞的 TCP 服务器套接字</span></span><br><span class="line">    <span class="type">int</span> server_fd = <span class="built_in">create_server_socket</span>(<span class="number">8080</span>);</span><br><span class="line">    <span class="keyword">if</span> (server_fd == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">close</span>(epfd);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">set_nonblocking</span>(server_fd) == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">close</span>(server_fd);</span><br><span class="line">        <span class="built_in">close</span>(epfd);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 监听标准输入（STDIN_FILENO）</span></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">epoll_event</span> event;</span><br><span class="line">    event.events = EPOLLIN;  <span class="comment">// 关注可读事件</span></span><br><span class="line">    event.data.fd = STDIN_FILENO;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// epoll_ctl -&gt; EPOLL_CTL_ADD</span></span><br><span class="line">    <span class="comment">// 添加需要监听的文件描述符 + 需要关注的事件</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">epoll_ctl</span>(epfd, EPOLL_CTL_ADD, STDIN_FILENO, &amp;event) == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">perror</span>(<span class="string">&quot;epoll_ctl: STDIN_FILENO&quot;</span>);</span><br><span class="line">        <span class="built_in">close</span>(server_fd);</span><br><span class="line">        <span class="built_in">close</span>(epfd);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 监听 TCP 服务器套接字</span></span><br><span class="line">    event.events = EPOLLIN;  <span class="comment">// 关注可读事件</span></span><br><span class="line">    event.data.fd = server_fd;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">epoll_ctl</span>(epfd, EPOLL_CTL_ADD, server_fd, &amp;event) == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">perror</span>(<span class="string">&quot;epoll_ctl: server_fd&quot;</span>);</span><br><span class="line">        <span class="built_in">close</span>(server_fd);</span><br><span class="line">        <span class="built_in">close</span>(epfd);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 这里的 epoll 监听两个文件描述符：</span></span><br><span class="line">    <span class="comment">// TCP + 标准输入</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建事件数组来存储就绪的文件描述符</span></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">epoll_event</span> events[MAX_EVENTS];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 主循环，等待并处理事件</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="type">int</span> n = <span class="built_in">epoll_wait</span>(epfd, events, MAX_EVENTS, <span class="number">-1</span>);  <span class="comment">// 无限等待事件</span></span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="built_in">perror</span>(<span class="string">&quot;epoll_wait&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (events[i].data.fd == STDIN_FILENO) &#123;</span><br><span class="line">                <span class="comment">// 处理标准输入事件</span></span><br><span class="line">                <span class="type">char</span> buf[<span class="number">1024</span>];</span><br><span class="line">                <span class="type">ssize_t</span> len = <span class="built_in">read</span>(STDIN_FILENO, buf, <span class="built_in">sizeof</span>(buf) - <span class="number">1</span>);</span><br><span class="line">                <span class="keyword">if</span> (len &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    buf[len] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;Received input: %s\n&quot;</span>, buf);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (events[i].data.fd == server_fd) &#123;</span><br><span class="line">                <span class="comment">// 处理新连接事件</span></span><br><span class="line">                <span class="keyword">struct</span> sockaddr_in client_addr;</span><br><span class="line">                <span class="type">socklen_t</span> client_len = <span class="built_in">sizeof</span>(client_addr);</span><br><span class="line">                <span class="type">int</span> client_fd = <span class="built_in">accept</span>(server_fd, (<span class="keyword">struct</span> sockaddr *)&amp;client_addr, &amp;client_len));</span><br><span class="line">                <span class="keyword">if</span> (client_fd == <span class="number">-1</span>) &#123;</span><br><span class="line">                    <span class="built_in">perror</span>(<span class="string">&quot;accept&quot;</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 设置新连接的非阻塞模式</span></span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">set_nonblocking</span>(client_fd) == <span class="number">-1</span>) &#123;</span><br><span class="line">                        <span class="built_in">close</span>(client_fd);</span><br><span class="line">                        <span class="keyword">continue</span>;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 将新的客户端连接添加到 epoll 中</span></span><br><span class="line">                    event.events = EPOLLIN | EPOLLET;  <span class="comment">// 关注可读事件，并使用边缘触发模式</span></span><br><span class="line">                    event.data.fd = client_fd;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">epoll_ctl</span>(epfd, EPOLL_CTL_ADD, client_fd, &amp;event) == <span class="number">-1</span>) &#123;</span><br><span class="line">                        <span class="built_in">perror</span>(<span class="string">&quot;epoll_ctl: client_fd&quot;</span>);</span><br><span class="line">                        <span class="built_in">close</span>(client_fd);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">&quot;New connection from %s\n&quot;</span>, <span class="built_in">inet_ntoa</span>(client_addr.sin_addr));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 处理客户端请求</span></span><br><span class="line">                <span class="keyword">if</span> (events[i].events &amp; EPOLLIN) &#123;</span><br><span class="line">                    <span class="type">int</span> client_fd = events[i].data.fd;</span><br><span class="line">                    <span class="type">char</span> buf[<span class="number">1024</span>];</span><br><span class="line">                    <span class="comment">// TODO</span></span><br><span class="line">                    <span class="comment">// 边缘触发方式能这么读取吗？？？</span></span><br><span class="line">                    <span class="comment">// 虽然之前设置了非阻塞模式, 不会导致死锁错误</span></span><br><span class="line">                    <span class="comment">// 但是这样会导致数据读取不全</span></span><br><span class="line">                    <span class="comment">// 使用轮询读取方式</span></span><br><span class="line">                    <span class="type">ssize_t</span> len = <span class="built_in">read</span>(client_fd, buf, <span class="built_in">sizeof</span>(buf) - <span class="number">1</span>);</span><br><span class="line">                    <span class="keyword">if</span> (len &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                        buf[len] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">&quot;Received data from client: %s\n&quot;</span>, buf);</span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (len == <span class="number">0</span>) &#123;</span><br><span class="line">                        <span class="comment">// 客户端关闭连接</span></span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">&quot;Client disconnected\n&quot;</span>);</span><br><span class="line">                        <span class="built_in">close</span>(client_fd);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="comment">// 错误处理</span></span><br><span class="line">                        <span class="built_in">perror</span>(<span class="string">&quot;read&quot;</span>);</span><br><span class="line">                        <span class="built_in">close</span>(client_fd);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 清理资源</span></span><br><span class="line">    <span class="built_in">close</span>(server_fd);</span><br><span class="line">    <span class="built_in">close</span>(epfd);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
     </div>
 
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+			<div class="home-sidebar-container">
+    <div class="sticky-container sticky">
+        
+        
+            
+            <div class="sidebar-content" >
+                <div class="avatar flex justify-center">
+    <img src="/images/redefine-avatar.svg">
+</div>
+                <div class="author flex flex-col justify-center my-2.5 mx-0">
+    <div class="name">The Redefine Team</div>
     
+        <div class="label">Lv1</div>
     
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+</div>
+                <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+            </div>
+        
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/04/MySQL_Log/">
+    </div>
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
+			
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/12/04/MySQL_Log/" class="post-title-link" itemprop="url">MySQL 中的常见日志类型</a>
-        </h2>
+			<div class="main-content">
+				<div class="home-content-container">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+                
 
-              <time title="Created: 2024-12-04 12:00:00" itemprop="dateCreated datePublished" datetime="2024-12-04T12:00:00+08:00">2024-12-04</time>
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2025/05/05/hello-world/">
+                            Hello World
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Qu...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon May 05 2025 12:54:25 GMT+0800">
+                
+                    2025-05-05
+                
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-05-05 13:24:46" itemprop="dateModified" datetime="2025-05-05T13:24:46+08:00">2025-05-05</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="错误日志（Error-Log）"><a href="#错误日志（Error-Log）" class="headerlink" title="错误日志（Error Log）"></a>错误日志（Error Log）</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>记录 MySQL 服务器启动、运行和关闭过程中的问题</p>
-<h3 id="详细特点"><a href="#详细特点" class="headerlink" title="详细特点"></a>详细特点</h3><ul>
-<li>默认启用，无法关闭</li>
-<li>记录内容：启动&#x2F;关闭信息、关键警告、错误消息</li>
-<li>默认位置：数据目录下的 <code>hostname.err</code> 文件</li>
-<li>配置参数：<code>log_error</code></li>
-</ul>
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
-<li>诊断服务器崩溃原因</li>
-<li>监控 MySQL 的运行状态</li>
-<li>识别配置问题和安全风险</li>
-</ul>
-<h2 id="二进制日志（Binary-Log）"><a href="#二进制日志（Binary-Log）" class="headerlink" title="二进制日志（Binary Log）"></a>二进制日志（Binary Log）</h2><h3 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h3><p>记录所有更改数据的 SQL 语句，以事件形式存储</p>
-<h3 id="详细特点-1"><a href="#详细特点-1" class="headerlink" title="详细特点"></a>详细特点</h3><ul>
-<li><p><strong>记录类型</strong>：基于语句（statement）、基于行（row）或混合模式</p>
-</li>
-<li><p><strong>写入时机</strong>：在事务完成后才进行写入，如果事务中途崩溃，且事务尚未提交，则不会记录</p>
-</li>
-<li><p><strong>事务安全</strong>：通过两阶段提交与 InnoDB 存储引擎协同</p>
-<blockquote>
-<p><strong>两阶段提交</strong></p>
-<ol>
-<li><p>第一阶段：准备阶段（Prepare Phase）</p>
-<ol>
-<li>写入 <code>redo log</code>：事务执行过程中，所有修改先行记录到内存中的 <code>redo log buffer</code></li>
-<li>刷盘操作：将 <code>redo log buffer</code> 内容刷新到磁盘上的 <code>redo log</code> 文件（&#x3D;&#x3D;持久化&#x3D;&#x3D;）</li>
-<li>标记状态：将 <code>redo log</code> 标记为 <code>prepare</code> 状态</li>
-<li>等待确认：此时事务尚未提交完成，修改对其他会话不可见</li>
-</ol>
-</li>
-<li><p>第二阶段：提交阶段（Commit Phase）</p>
-<ol>
-<li><p>写入 <code>binlog</code>：将事务的 <code>binlog</code> 写入到磁盘</p>
-</li>
-<li><p><code>redo log</code> 提交：在 <code>bin log</code> 写入成功后，将 <code>redo log</code> 状态从 <code>prepare</code> 改为 <code>commit</code></p>
-</li>
-<li><p>完成提交：事务提交完成，修改对其他会话可见</p>
-<p> ​                               <strong>崩溃恢复机制</strong></p>
-</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>当 MySQL 服务器崩溃后重启时，会进行崩溃恢复，检查 <code>redo log</code>：</p>
-<ol>
-<li>只有 <code>prepare</code> 记录，无 <code>bin log</code> 记录：事务回滚</li>
-<li>有 <code>prepare</code> 记录，且有对应的 <code>bin log</code> 记录：事务提交</li>
-<li><code>redo log</code> 已经提交：事务已完成，无需特殊处理</li>
-</ol>
-</blockquote>
-</li>
-<li><p>格式：二进制格式，非文本</p>
-</li>
-<li><p>追加写入：一个文件写满后创建新文件</p>
-</li>
-<li><p>配置参数：<code>log_bin</code>、<code>binlog_format</code>、<code>sync_binlog</code>等</p>
-</li>
-</ul>
-<h3 id="应用场景-1"><a href="#应用场景-1" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
-<li>&#x3D;&#x3D;主从复制的数据源&#x3D;&#x3D;</li>
-<li>时间点恢复（point-in-time recovery）</li>
-<li>审计数据变更</li>
-</ul>
-<h2 id="重做日志（Redo-Log）"><a href="#重做日志（Redo-Log）" class="headerlink" title="重做日志（Redo Log）"></a>重做日志（Redo Log）</h2><h3 id="基本概念-2"><a href="#基本概念-2" class="headerlink" title="基本概念"></a>基本概念</h3><p><code>InnoDB</code>存储引擎特有的物理日志，记录页面的物理更改</p>
-<h3 id="详细特点-2"><a href="#详细特点-2" class="headerlink" title="详细特点"></a>详细特点</h3><ul>
-<li><p><strong>循环写入</strong>：固定大小的文件组，写满后覆盖最早的记录</p>
-</li>
-<li><p><strong>物理日志</strong>：记录<code>对哪个数据页做了什么修改</code></p>
-</li>
-<li><p><strong>WAL机制</strong>：先写日志，再修改数据页</p>
-<blockquote>
-<h2 id="WAL（Write-Ahead-Logging）机制"><a href="#WAL（Write-Ahead-Logging）机制" class="headerlink" title="WAL（Write-Ahead Logging）机制"></a>WAL（Write-Ahead Logging）机制</h2><p>这是数据库系统中广泛应用的一种日志机制，它是事务性数据库（如<code>InnoDB</code>）实现持久性和原子性的关键技术</p>
-<h3 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h3><p>WAL机制的核心原则是：<strong>数据修改前必须先写日志</strong></p>
-<ol>
-<li><strong>“写前”承诺</strong>：任何数据页的修改必须先将这些修改记录到持久化的日志中</li>
-<li><strong>延迟数据写入</strong>：任何数据页的修改可以稍后进行</li>
-<li><strong>顺序写入日志</strong>：日志文件采用顺序追加方式写入，性能远高于随机写入</li>
-</ol>
-<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><ol>
-<li><strong>生成日志记录</strong>：当事务需要修改数据时，生成<code>WAL</code>记录（在<code>MySQL</code>的<code>InnoDB</code>中就是<code>redo log</code>记录）</li>
-<li><strong>写入日志缓冲</strong>：先将日志记录写入内存中的日志缓冲区</li>
-<li><strong>持久化日志</strong>：在特定实际（如事务提交时），确保日志记录持久化到磁盘</li>
-<li><strong>延迟数据写入</strong>：真正的数据页修改可以在后台异步完成</li>
-<li><strong>检查点处理</strong>：定期创建检查点，将脏页刷新到磁盘</li>
-</ol>
-<h3 id="WAL的优势"><a href="#WAL的优势" class="headerlink" title="WAL的优势"></a>WAL的优势</h3><ol>
-<li><strong>提高性能</strong>：<ol>
-<li>日志时顺序写入的，比随机IO快得多</li>
-<li>多个事务的日志可以批量写入</li>
-<li>多次修改同一数据页只需一次物理写入</li>
-</ol>
-</li>
-<li><strong>保证数据安全</strong>：<ol>
-<li>即使系统在数据页写入前崩溃，也可以通过重放日志恢复</li>
-</ol>
-</li>
-<li><strong>支持高并发</strong>：<ol>
-<li>日志先行减少了对数据页的争用批量处理提高了整体吞吐量</li>
-</ol>
-</li>
-</ol>
-<h3 id="在MySQL-InnoDB中的实现"><a href="#在MySQL-InnoDB中的实现" class="headerlink" title="在MySQL InnoDB中的实现"></a>在MySQL InnoDB中的实现</h3><p>在MySQL的InnoDB存储引擎中，WAL机制通过redo log实现：</p>
-<ol>
-<li><strong>redo log buffer</strong>：内存中的缓冲区</li>
-<li><strong>redo log files</strong>：固定大小的循环磁盘日志文件组</li>
-<li><code>innodb_flush_log_at_trx_commit</code>参数控制日志刷新策略</li>
-</ol>
-<h3 id="WAL与事务处理"><a href="#WAL与事务处理" class="headerlink" title="WAL与事务处理"></a>WAL与事务处理</h3><p>WAL是ACID中持久性(Durability)的关键实现机制，通过确保所有修改在真正应用到数据文件之前，都已经安全记录在日志中，从而在系统崩溃后能够恢复到一致状态。</p>
-</blockquote>
-<p>这种”先写日志，后写数据”的模式是现代高性能数据库系统的基石，在保证数据安全的同时显著提升了写操作性能。</p>
-</li>
-<li><p><strong>事务提交时刷新到磁盘</strong></p>
-</li>
-<li><p><strong>配置参数</strong>：<code>innodb_log_file_size</code>、<code>innodb_log_files_in_group</code>等</p>
-</li>
-</ul>
-<h3 id="应用场景-2"><a href="#应用场景-2" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
-<li>崩溃恢复：系统意外关闭后的数据恢复</li>
-<li>提高写入性能：批量延迟写入磁盘</li>
-<li>事务持久性保证</li>
-</ul>
-<h2 id="撤销日志（Undo-Log）"><a href="#撤销日志（Undo-Log）" class="headerlink" title="撤销日志（Undo Log）"></a>撤销日志（Undo Log）</h2><h3 id="基本概念-3"><a href="#基本概念-3" class="headerlink" title="基本概念"></a>基本概念</h3><p><code>InnoDB</code>特有的逻辑日志，记录事务修改前的数据状态。</p>
-<h3 id="详细特点-3"><a href="#详细特点-3" class="headerlink" title="详细特点"></a>详细特点</h3><ol>
-<li>主要存储于系统表空间或独立Undo表空间</li>
-<li>提供数据的前镜像(before image)</li>
-<li>支持事务的原子性和隔离性</li>
-<li>MVCC机制的基础</li>
-<li>配置参数：<code>innodb_undo_directory</code>、<code>innodb_undo_logs</code>等</li>
-</ol>
-<h3 id="应用场景-3"><a href="#应用场景-3" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
-<li><p>事务回滚操作</p>
-</li>
-<li><p>实现多版本并发控制(MVCC)</p>
-<blockquote>
-<h2 id="多版本并发控制-MVCC-Multi-Version-Concurrency-Control"><a href="#多版本并发控制-MVCC-Multi-Version-Concurrency-Control" class="headerlink" title="多版本并发控制(MVCC, Multi-Version Concurrency Control)"></a>多版本并发控制(MVCC, Multi-Version Concurrency Control)</h2><h3 id="一、MVCC的核心思想"><a href="#一、MVCC的核心思想" class="headerlink" title="一、MVCC的核心思想"></a>一、MVCC的核心思想</h3><p><strong>为每个事务提供数据的“快照”（Snapshot）</strong>。当一个事务读取数据时，它看到的是某个时间点的数据版本，而不是其他事务正在修改的版本。</p>
-<ul>
-<li><strong>读操作不会阻塞写操作</strong></li>
-<li><strong>写操作也不会阻塞读操作</strong></li>
-<li>每次写入新数据时，并不是修改原有的数据记录，而是<strong>生成一个新的版本</strong></li>
-<li>旧版本数据用于满足并发事务的读请求</li>
-</ul>
-<h3 id="二、MVCC的实现机制（以-InnoDB-引擎为例）"><a href="#二、MVCC的实现机制（以-InnoDB-引擎为例）" class="headerlink" title="二、MVCC的实现机制（以 InnoDB 引擎为例）"></a>二、MVCC的实现机制（以 InnoDB 引擎为例）</h3><p>MVCC 通常基于以下几个字段实现：</p>
-<h4 id="隐藏字段"><a href="#隐藏字段" class="headerlink" title="隐藏字段"></a><strong>隐藏字段</strong></h4><p>每行数据都会隐藏地维护两个版本号：</p>
-<ul>
-<li><code>trx_id</code>（创建版本）：标识插入该记录的事务ID</li>
-<li><code>roll_pointer</code>：指向旧版本的回滚日志，用于构建数据的历史版本</li>
-<li>有些实现（如PostgreSQL）会显式维护<code>xmin</code>和<code>xmax</code></li>
-</ul>
-<h4 id="undo-log（回滚日志）"><a href="#undo-log（回滚日志）" class="headerlink" title="undo log（回滚日志）"></a><strong>undo log（回滚日志）</strong></h4><p>记录旧版本的数据。写操作发生时会写入 undo log，通过它可以回溯出历史版本。</p>
-<h4 id="Read-View（读视图）"><a href="#Read-View（读视图）" class="headerlink" title="Read View（读视图）"></a><strong>Read View（读视图）</strong></h4><ul>
-<li><p>当事务开始时，会生成一个Read View，记录当前活跃的事务ID列表</p>
-</li>
-<li><p>用于判断某行记录的版本对当前事务是否“可见”</p>
-<blockquote>
-<ul>
-<li><p><strong>什么是Read View（读视图）</strong></p>
-<blockquote>
-<p><code>Read View</code> 是 MVCC（多版本并发控制）机制中一个非常核心的概念，尤其在像 MySQL 的 InnoDB 存储引擎中被明确使用和讨论。<strong>它本质上是事务在执行查询时，用来判断哪些数据版本（行记录）对当前事务是可见的一个数据结构或机制</strong>。</p>
-<p>可以把 <code>Read View</code> 理解为事务在某一时刻给整个数据库拍下的一个“快照”的<strong>可见性规则定义</strong>。</p>
-</blockquote>
-</li>
-<li><p><strong>Read View 的关键组成部分（以 InnoDB 为例）</strong></p>
-<blockquote>
-<ul>
-<li><p><strong><code>m_ids</code> (或 <code>trx_ids</code>)</strong>: 一个列表或集合，包含在<strong>创建此 <code>Read View</code> 时</strong>，系统中所有**活跃（未提交）**的读写事务的 ID。</p>
-</li>
-<li><p><strong><code>m_low_limit_id</code> (或 <code>up_limit_id</code>)</strong>: 创建此 <code>Read View</code> 时，系统中已分配的<strong>下一个事务 ID</strong>。也就是说，大于或等于这个 ID 的事务，都是在 <code>Read View</code> 创建之后才开始的。</p>
-</li>
-<li><p><strong><code>m_high_limit_id</code> (或 <code>low_limit_id</code>)</strong>: <code>m_ids</code> 列表中事务 ID 的最小值。也就是创建此 <code>Read View</code> 时，系统中最早启动的那个未提交事务的 ID。</p>
-</li>
-<li><p><strong><code>m_creator_trx_id</code></strong>: 创建这个 <code>Read View</code> 的事务自身的 ID。</p>
-</li>
-</ul>
-</blockquote>
-</li>
-<li><p><strong>可见性判断规则</strong></p>
-<blockquote>
-<ol>
-<li><strong>判断 <code>row_trx_id</code> 是否是创建者自身的 <code>trx_id</code>？</strong></li>
-</ol>
-<ul>
-<li>如果是 (<code>row_trx_id == m_creator_trx_id</code>)，则该版本<strong>可见</strong>。（事务总能看到自己的修改，无论是否提交）。</li>
-</ul>
-<ol start="2">
-<li><strong>判断 <code>row_trx_id</code> 是否小于 <code>m_high_limit_id</code>？</strong></li>
-</ol>
-<ul>
-<li>如果是 (<code>row_trx_id &lt; m_high_limit_id</code>)，则说明创建该版本的事务在 <code>Read View</code> 创建时<strong>已经提交</strong>了，该版本<strong>可见</strong>。</li>
-</ul>
-<ol start="3">
-<li><strong>判断 <code>row_trx_id</code> 是否大于或等于 <code>m_low_limit_id</code>？</strong></li>
-</ol>
-<ul>
-<li>如果是 (<code>row_trx_id &gt;= m_low_limit_id</code>)，则说明创建该版本的事务在 <code>Read View</code> 创建时<strong>尚未开始</strong>，该版本<strong>不可见</strong>。</li>
-</ul>
-<ol start="4">
-<li><strong>判断 <code>row_trx_id</code> 是否在 <code>m_ids</code> 列表中？</strong></li>
-</ol>
-<ul>
-<li>如果在 (<code>row_trx_id</code> is in <code>m_ids</code>)，则说明创建该版本的事务在 <code>Read View</code> 创建时<strong>还是活跃（未提交）<strong>状态，该版本</strong>不可见</strong>。</li>
-<li>如果不在，则说明创建该版本的事务在 <code>Read View</code> 创建时<strong>已经提交</strong>了（虽然它可能是在 <code>m_high_limit_id</code> 之后开始的，但在 <code>Read View</code> 创建前就结束了），该版本<strong>可见</strong>。</li>
-</ul>
-</blockquote>
-</li>
-<li><p><strong>READ COMMITTED(读已提交) 和 REPEATABLE READ(可重复读) 的区别</strong></p>
-<blockquote>
-<p>它们之间的区别主要体现在<strong>Read View的创建时机</strong>，具体来说：</p>
-<ul>
-<li><p><strong>读已提交</strong>在每个<strong>SELECT语句执行前</strong>都会创建一个新的<code>Read View</code>，这意味着在一个事务内部，后续的查询<strong>可以看到其他事务在此期间提交的修改</strong>，从而导致<strong>不可重复读问题</strong></p>
-</li>
-<li><p><strong>可重复读</strong>在事务中的<strong>仅在第一个 SELECT 语句执行时创建一次</strong>，并且在整个事务期间都<strong>复用</strong>这个 <code>Read View</code>，从而<strong>避免了不可重复读和大部分幻读</strong></p>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li><p>支持READ COMMITTED、REPEATABLE READ等隔离级别</p>
-</li>
-</ol>
-
-      
+        </span>
+        
+        
     </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
+    <a href="/2025/05/05/hello-world/">阅读全文<span class="seo-reader-text">Hello World</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/07/%E4%BB%BF%E5%87%BD%E6%95%B0%E4%B8%8Elambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                            仿函数和Lambda表达式
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            仿函数和lambda表达式仿函数仿函数，就是一种类类型，通过重载调用运算符”()”来实现像函数一样的调用功能，所以称之为仿函数
+仿函数的优势
+仿函数相比普通函数具有以下优势：
+
+
+保存状态：仿函数可以在对象中保存状态
+可作为模板参数：比函数指针更灵活
+内联优化：编译器更容易对仿函数进行内联优化
+类型安全：类型在编译期确定
+
+
+1. 保存状态 (Saving State)介绍普通函数通常是无状...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Dec 07 2024 12:00:00 GMT+0800">
+                
+                    2024-12-07
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/C/">C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/12/07/%E4%BB%BF%E5%87%BD%E6%95%B0%E4%B8%8Elambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">阅读全文<span class="seo-reader-text">仿函数和Lambda表达式</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/05/Linux%E9%AB%98%E7%BA%A7IO%E6%A8%A1%E5%9E%8B/">
+                            Linux高级IO模型
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            Linux 网络高级 IO五种IO模型
+本文将介绍Linux网络编程中的五种常见网络高级IO函数
+
+阻塞IO
+在内核将数据准备好之前, 系统调用会一直等待. 
+所有的套接字, 默认都是阻塞方式.
+
+
+非阻塞IO
+如果内核还未将数据准备好, 系统调用仍然会直接返回
+返回EWOULDBLOCK错误码.
+该IO模式常需要以循环的方式反复尝试读写文件描述符, 这个过程称为轮询
+但是轮询会带来大量的C...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Dec 05 2024 13:26:00 GMT+0800">
+                
+                    2024-12-05
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Linux/">Linux</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/12/05/Linux%E9%AB%98%E7%BA%A7IO%E6%A8%A1%E5%9E%8B/">阅读全文<span class="seo-reader-text">Linux高级IO模型</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/04/MySQL%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%97%A5%E5%BF%97%E7%B1%BB%E5%9E%8B/">
+                            MySQL 中的常见日志类型
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            错误日志（Error Log）基本概念记录 MySQL 服务器启动、运行和关闭过程中的问题
+详细特点
+默认启用，无法关闭
+记录内容：启动&#x2F;关闭信息、关键警告、错误消息
+默认位置：数据目录下的 hostname.err 文件
+配置参数：log_error
+
+应用场景
+诊断服务器崩溃原因
+监控 MySQL 的运行状态
+识别配置问题和安全风险
+
+二进制日志（Binary Log）基本概念...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Dec 04 2024 12:00:00 GMT+0800">
+                
+                    2024-12-04
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/MySQL/">MySQL</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/12/04/MySQL%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%97%A5%E5%BF%97%E7%B1%BB%E5%9E%8B/">阅读全文<span class="seo-reader-text">MySQL 中的常见日志类型</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator px-7 py-5">
+        <div class="paginator">
+	<span class="page-number current">1</span>
+</div>
   
-  
-  
+    </div>
+</div>
+
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">The Redefine Team</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 4 篇文章
+                    </span>
+                    
+                        <span>
+                            共 14k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+
+</main>
 
 
-  
 
+<script src="/js/build/libs/Swup.min.js"></script>
 
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
 
-          </div>
-          
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
 
 <script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
     });
-  }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
 
 
 
-      </div>
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+<script src="/js/build/utils.js" type="module"></script>
 
+<script src="/js/build/main.js" type="module"></script>
 
-      </div>
-    </main>
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
 
-        
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
 
 
 
 
 
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
 
 
 
-      </div>
-    </footer>
-  </div>
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
 
 
 
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="/js/build/libs/Typed.min.js"></script>
 
   
+<script src="/js/build/plugins/typed.js" type="module"></script>
 
-  
 
+
+
+
+
+
+
+    
+<script src="/js/build/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
 </body>
+
 </html>
