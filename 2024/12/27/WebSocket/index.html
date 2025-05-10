@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://xnefertar.github.io/2025/05/05/hello-world/"/>
+    <link rel="canonical" href="http://xnefertar.github.io/2024/12/27/websocket/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,15 +23,16 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://xnefertar.github.io/2025/05/05/hello-world/index.html">
+<meta property="og:title" content="WebSocket协议详解">
+<meta property="og:url" content="http://xnefertar.github.io/2024/12/27/WebSocket/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-05-05T04:54:25.423Z">
-<meta property="article:modified_time" content="2025-05-05T04:54:25.423Z">
+<meta property="article:published_time" content="2024-12-27T05:15:00.000Z">
+<meta property="article:modified_time" content="2025-05-10T16:35:12.892Z">
 <meta property="article:author" content="XNefertar">
+<meta property="article:tag" content="NetWork">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://xnefertar.github.io/images/redefine-og.webp">
     
@@ -45,7 +46,7 @@
     
     <title>
         
-            Hello World | XNefertar&#39;s Blog
+            WebSocket协议详解 | XNefertar&#39;s Blog
         
     </title>
 
@@ -234,7 +235,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Hello World</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">WebSocket协议详解</h1>
 			</div>
 			
 		</div>
@@ -255,31 +256,42 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-05-05 12:54:25</span>
-        <span class="mobile">2025-05-05 12:54:25</span>
+        <span class="desktop">2024-12-27 13:15</span>
+        <span class="mobile">2024-12-27 13:15</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-05 12:54:25</span>
-            <span class="mobile">2025-05-05 12:54:25</span>
+            <span class="desktop">2025-05-11 00:35:12</span>
+            <span class="mobile">2025-05-11 00:35:12</span>
             <span class="hover-info">更新</span>
         </span>
     
 
     
     
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/NetWork/">NetWork</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>75 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.2k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 分钟</span>
         </span>
     
     
@@ -298,19 +310,205 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+			<h1 id="WebSocket协议详解"><a href="#WebSocket协议详解" class="headerlink" title="WebSocket协议详解"></a>WebSocket协议详解</h1><p>WebSocket是一种在单个TCP连接上提供全双工通信的网络协议，允许服务器主动向客户端推送数据。下面详细介绍WebSocket协议的格式和相关知识。</p>
+<h2 id="1-WebSocket协议基本概念"><a href="#1-WebSocket协议基本概念" class="headerlink" title="1. WebSocket协议基本概念"></a>1. WebSocket协议基本概念</h2><p>WebSocket协议由IETF标准RFC 6455定义，主要特点：</p>
+<ul>
+<li>基于TCP的全双工通信</li>
+<li>持久连接，避免多次握手</li>
+<li>浏览器原生支持</li>
+<li>数据格式轻量，相比HTTP头部开销小</li>
+<li>支持二进制和文本数据传输</li>
+</ul>
+<h2 id="2-WebSocket握手过程"><a href="#2-WebSocket握手过程" class="headerlink" title="2. WebSocket握手过程"></a>2. WebSocket握手过程</h2><p>WebSocket连接建立需要通过HTTP升级机制：</p>
+<h3 id="客户端请求示例："><a href="#客户端请求示例：" class="headerlink" title="客户端请求示例："></a>客户端请求示例：</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET /ws HTTP/1.1</span><br><span class="line">Host: server.example.com</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==</span><br><span class="line">Sec-WebSocket-Version: 13</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<h3 id="服务器响应示例："><a href="#服务器响应示例：" class="headerlink" title="服务器响应示例："></a>服务器响应示例：</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 101 Switching Protocols</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<p>关键点：</p>
+<ul>
+<li>Sec-WebSocket-Key：客户端随机生成的Base64编码字符串</li>
+<li>Sec-WebSocket-Accept：服务器通过特定算法处理客户端提供的key<ul>
+<li>将客户端的key与固定GUID字符串”258EAFA5-E914-47DA-95CA-C5AB0DC85B11”拼接</li>
+<li>计算SHA-1哈希值</li>
+<li>对结果进行Base64编码</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-WebSocket帧格式详解"><a href="#3-WebSocket帧格式详解" class="headerlink" title="3. WebSocket帧格式详解"></a>3. WebSocket帧格式详解</h2><p>WebSocket数据以帧(Frame)为单位传输，帧格式如下：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-------+-+-------------+-------------------------------+</span><br><span class="line">|F|R|R|R| opcode|M| Payload len |    Extended payload length    |</span><br><span class="line">|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |</span><br><span class="line">|N|V|V|V|       |S|             |   (if payload len==126/127)   |</span><br><span class="line">| |1|2|3|       |K|             |                               |</span><br><span class="line">+-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +</span><br><span class="line">|     Extended payload length continued, if payload len == 127  |</span><br><span class="line">+ - - - - - - - - - - - - - - - +-------------------------------+</span><br><span class="line">|                     Payload Data continued ...                |</span><br><span class="line">+---------------------------------------------------------------+</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="帧头字段说明："><a href="#帧头字段说明：" class="headerlink" title="帧头字段说明："></a>帧头字段说明：</h3><ol>
+<li><p><strong>FIN(1位)</strong>: 标识是否为消息的最后一帧</p>
+<ul>
+<li>0: 消息还有后续帧</li>
+<li>1: 消息的最后一帧</li>
+</ul>
+</li>
+<li><p><strong>RSV1-3(3位)</strong>: 保留位，通常为0</p>
+<ul>
+<li>只有使用WebSocket扩展时才非零</li>
+</ul>
+</li>
+<li><p><strong>Opcode(4位)</strong>: 操作码，标识帧类型</p>
+<ul>
+<li>0x0: 继续帧</li>
+<li>0x1: 文本帧</li>
+<li>0x2: 二进制帧</li>
+<li>0x8: 关闭连接</li>
+<li>0x9: Ping</li>
+<li>0xA: Pong</li>
+</ul>
+</li>
+<li><p><strong>MASK(1位)</strong>: 是否使用掩码</p>
+<ul>
+<li>客户端发送到服务器的消息必须掩码</li>
+<li>服务器发送到客户端的消息不得掩码</li>
+</ul>
+</li>
+<li><p><strong>Payload length(7位+扩展)</strong>: 消息长度</p>
+<ul>
+<li>0-125: 实际长度</li>
+<li>126: 使用后续2字节表示长度(16位)</li>
+<li>127: 使用后续8字节表示长度(64位)</li>
+</ul>
+</li>
+<li><p><strong>Masking-key(0或4字节)</strong>: 掩码密钥</p>
+<ul>
+<li>仅当MASK&#x3D;1时存在</li>
+</ul>
+</li>
+<li><p><strong>Payload data</strong>: 实际数据</p>
+</li>
+</ol>
+<h2 id="4-数据掩码机制"><a href="#4-数据掩码机制" class="headerlink" title="4. 数据掩码机制"></a>4. 数据掩码机制</h2><p>客户端发送到服务器的所有帧必须应用掩码：</p>
+<ol>
+<li>客户端生成4字节随机掩码密钥</li>
+<li>对每个数据字节应用异或(XOR)操作:<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">转换后字节 = 原始字节 XOR 掩码密钥[i % 4]</span><br></pre></td></tr></table></figure></div></li>
+<li>服务器接收后使用相同算法解码</li>
+</ol>
+<p>掩码的主要目的是防止缓存投毒攻击，增强安全性。</p>
+<h2 id="5-WebSocket操作码详解"><a href="#5-WebSocket操作码详解" class="headerlink" title="5. WebSocket操作码详解"></a>5. WebSocket操作码详解</h2><ol>
+<li><p><strong>文本帧(0x1)</strong></p>
+<ul>
+<li>包含UTF-8编码文本</li>
+<li>完整消息可能跨多帧</li>
+</ul>
+</li>
+<li><p><strong>二进制帧(0x2)</strong></p>
+<ul>
+<li>包含任意二进制数据</li>
+</ul>
+</li>
+<li><p><strong>关闭帧(0x8)</strong></p>
+<ul>
+<li>可附带状态码和文本说明</li>
+<li>常见状态码:<ul>
+<li>1000: 正常关闭</li>
+<li>1001: 离开</li>
+<li>1002: 协议错误</li>
+<li>1003: 数据类型不支持</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Ping(0x9)&#x2F;Pong(0xA)</strong></p>
+<ul>
+<li>心跳检测</li>
+<li>收到Ping必须回复Pong</li>
+<li>可包含应用数据</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-数据分片"><a href="#6-数据分片" class="headerlink" title="6. 数据分片"></a>6. 数据分片</h2><p>大型消息可分片发送:</p>
+<ul>
+<li>首帧设置适当的opcode(1:文本或2:二进制)</li>
+<li>中间帧opcode为0(继续帧)</li>
+<li>最后一帧FIN&#x3D;1</li>
+<li>只有首帧设置有效opcode，接收方需重组完整消息</li>
+</ul>
+<h2 id="7-WebSocket实现注意事项"><a href="#7-WebSocket实现注意事项" class="headerlink" title="7. WebSocket实现注意事项"></a>7. WebSocket实现注意事项</h2><ol>
+<li><p><strong>连接管理</strong></p>
+<ul>
+<li>维护活跃连接列表</li>
+<li>实现心跳检测</li>
+<li>优雅处理关闭</li>
+</ul>
+</li>
+<li><p><strong>安全性考虑</strong></p>
+<ul>
+<li>使用WSS(WebSocket Secure)</li>
+<li>验证Origin头</li>
+<li>防止资源枯竭攻击</li>
+<li>实施速率限制</li>
+</ul>
+</li>
+<li><p><strong>性能优化</strong></p>
+<ul>
+<li>使用事件驱动架构(如Epoll)</li>
+<li>避免频繁小消息</li>
+<li>合理配置缓冲区大小</li>
+</ul>
+</li>
+</ol>
+<h2 id="8-WebSocket与HTTP-2-0比较"><a href="#8-WebSocket与HTTP-2-0比较" class="headerlink" title="8. WebSocket与HTTP&#x2F;2.0比较"></a>8. WebSocket与HTTP&#x2F;2.0比较</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>WebSocket</th>
+<th>HTTP&#x2F;2.0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>双向通信</td>
+<td>原生支持</td>
+<td>支持(PUSH)</td>
+</tr>
+<tr>
+<td>持久连接</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>头部开销</td>
+<td>非常小</td>
+<td>压缩减小</td>
+</tr>
+<tr>
+<td>消息类型</td>
+<td>文本&#x2F;二进制</td>
+<td>请求&#x2F;响应</td>
+</tr>
+<tr>
+<td>服务推送</td>
+<td>完全支持</td>
+<td>有限支持</td>
+</tr>
+</tbody></table>
+<h2 id="9-应用场景"><a href="#9-应用场景" class="headerlink" title="9. 应用场景"></a>9. 应用场景</h2><p>WebSocket特别适合以下场景:</p>
+<ul>
+<li>实时协作平台</li>
+<li>游戏和多媒体应用</li>
+<li>股票交易和金融数据</li>
+<li>聊天应用</li>
+<li>社交媒体实时通知</li>
+<li>物联网设备通信</li>
+<li>日志实时监控(如您的应用)</li>
+</ul>
+<h2 id="10-浏览器支持和兼容性"><a href="#10-浏览器支持和兼容性" class="headerlink" title="10. 浏览器支持和兼容性"></a>10. 浏览器支持和兼容性</h2><p>现代浏览器都很好地支持WebSocket:</p>
+<ul>
+<li>Chrome 4+</li>
+<li>Firefox 4+</li>
+<li>Safari 5+</li>
+<li>Edge&#x2F;IE 10+</li>
+</ul>
+<p>对于不支持WebSocket的环境，可使用的回退技术:</p>
+<ul>
+<li>长轮询</li>
+<li>SSE (Server-Sent Events)</li>
+<li>Flash Socket</li>
+</ul>
+<p>您的EpollServer实现展示了WebSocket协议的完整处理流程，包括握手、帧解析和发送，以及各种操作码的处理，是WebSocket协议的一个很好的工程实现案例。</p>
+<p>找到具有 2 个许可证类型的类似代码</p>
 
 		</div>
 
@@ -318,18 +516,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> Hello World</li>
+        <li><strong>标题:</strong> WebSocket协议详解</li>
         <li><strong>作者:</strong> The Redefine Team</li>
         <li><strong>创建于
-                :</strong> 2025-05-05 12:54:25</li>
+                :</strong> 2024-12-27 13:15:00</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-05 12:54:25
+                    :</strong> 2025-05-11 00:35:12
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2025/05/05/hello-world/
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/12/27/WebSocket/
         </li>
         <li>
             <strong>
@@ -348,17 +546,37 @@
 		
 
 		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/NetWork/">#NetWork</a>&nbsp;
+			</li>
+			
+		</ul>
+		
 
 		
 
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2025/05/05/hello-world/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Hello World</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2024/12/27/WebSocket/">
+				<a class="next" rel="next" href="/2024/12/17/%E8%AF%A6%E8%A7%A3TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%BC%A0%E8%BE%93%E5%AE%9E%E7%8E%B0/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">WebSocket协议详解</span>
+						<span class="post-nav-title-item">TCP协议是如何实现可靠性传输的</span>
 						<span class="post-nav-item">下一篇</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -422,8 +640,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">Hello World</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		<div class="page-title">WebSocket协议详解</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WebSocket%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3"><span class="nav-text">WebSocket协议详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-WebSocket%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">1. WebSocket协议基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-WebSocket%E6%8F%A1%E6%89%8B%E8%BF%87%E7%A8%8B"><span class="nav-text">2. WebSocket握手过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-text">客户端请求示例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-text">服务器响应示例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-WebSocket%E5%B8%A7%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3"><span class="nav-text">3. WebSocket帧格式详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A7%E5%A4%B4%E5%AD%97%E6%AE%B5%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="nav-text">帧头字段说明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%95%B0%E6%8D%AE%E6%8E%A9%E7%A0%81%E6%9C%BA%E5%88%B6"><span class="nav-text">4. 数据掩码机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-WebSocket%E6%93%8D%E4%BD%9C%E7%A0%81%E8%AF%A6%E8%A7%A3"><span class="nav-text">5. WebSocket操作码详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%95%B0%E6%8D%AE%E5%88%86%E7%89%87"><span class="nav-text">6. 数据分片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-WebSocket%E5%AE%9E%E7%8E%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">7. WebSocket实现注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-WebSocket%E4%B8%8EHTTP-2-0%E6%AF%94%E8%BE%83"><span class="nav-text">8. WebSocket与HTTP&#x2F;2.0比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">9. 应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%94%AF%E6%8C%81%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-text">10. 浏览器支持和兼容性</span></a></li></ol></li></ol>
 
 	</div>
 </div>
