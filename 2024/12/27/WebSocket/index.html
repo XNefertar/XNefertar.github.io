@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2024-12-27T05:15:00.000Z">
-<meta property="article:modified_time" content="2025-05-10T16:35:12.892Z">
+<meta property="article:modified_time" content="2025-05-13T16:24:31.712Z">
 <meta property="article:author" content="XNefertar">
 <meta property="article:tag" content="NetWork">
 <meta name="twitter:card" content="summary">
@@ -212,7 +212,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -263,8 +263,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-11 00:35:12</span>
-            <span class="mobile">2025-05-11 00:35:12</span>
+            <span class="desktop">2025-05-14 00:24:31</span>
+            <span class="mobile">2025-05-14 00:24:31</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -311,7 +311,7 @@
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<h1 id="WebSocket协议详解"><a href="#WebSocket协议详解" class="headerlink" title="WebSocket协议详解"></a>WebSocket协议详解</h1><p>WebSocket是一种在单个TCP连接上提供全双工通信的网络协议，允许服务器主动向客户端推送数据。下面详细介绍WebSocket协议的格式和相关知识。</p>
-<h2 id="1-WebSocket协议基本概念"><a href="#1-WebSocket协议基本概念" class="headerlink" title="1. WebSocket协议基本概念"></a>1. WebSocket协议基本概念</h2><p>WebSocket协议由IETF标准RFC 6455定义，主要特点：</p>
+<h2 id="WebSocket协议基本概念"><a href="#WebSocket协议基本概念" class="headerlink" title="WebSocket协议基本概念"></a>WebSocket协议基本概念</h2><p>WebSocket协议由IETF标准RFC 6455定义，主要特点：</p>
 <ul>
 <li>基于TCP的全双工通信</li>
 <li>持久连接，避免多次握手</li>
@@ -319,7 +319,7 @@
 <li>数据格式轻量，相比HTTP头部开销小</li>
 <li>支持二进制和文本数据传输</li>
 </ul>
-<h2 id="2-WebSocket握手过程"><a href="#2-WebSocket握手过程" class="headerlink" title="2. WebSocket握手过程"></a>2. WebSocket握手过程</h2><p>WebSocket连接建立需要通过HTTP升级机制：</p>
+<h2 id="WebSocket握手过程"><a href="#WebSocket握手过程" class="headerlink" title="WebSocket握手过程"></a>WebSocket握手过程</h2><p>WebSocket连接建立需要通过HTTP升级机制：</p>
 <h3 id="客户端请求示例："><a href="#客户端请求示例：" class="headerlink" title="客户端请求示例："></a>客户端请求示例：</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET /ws HTTP/1.1</span><br><span class="line">Host: server.example.com</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==</span><br><span class="line">Sec-WebSocket-Version: 13</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="服务器响应示例："><a href="#服务器响应示例：" class="headerlink" title="服务器响应示例："></a>服务器响应示例：</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 101 Switching Protocols</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</span><br></pre></td></tr></table></figure></div>
@@ -334,7 +334,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="3-WebSocket帧格式详解"><a href="#3-WebSocket帧格式详解" class="headerlink" title="3. WebSocket帧格式详解"></a>3. WebSocket帧格式详解</h2><p>WebSocket数据以帧(Frame)为单位传输，帧格式如下：</p>
+<h2 id="WebSocket帧格式详解"><a href="#WebSocket帧格式详解" class="headerlink" title="WebSocket帧格式详解"></a>WebSocket帧格式详解</h2><p>WebSocket数据以帧(Frame)为单位传输，帧格式如下：</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-------+-+-------------+-------------------------------+</span><br><span class="line">|F|R|R|R| opcode|M| Payload len |    Extended payload length    |</span><br><span class="line">|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |</span><br><span class="line">|N|V|V|V|       |S|             |   (if payload len==126/127)   |</span><br><span class="line">| |1|2|3|       |K|             |                               |</span><br><span class="line">+-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +</span><br><span class="line">|     Extended payload length continued, if payload len == 127  |</span><br><span class="line">+ - - - - - - - - - - - - - - - +-------------------------------+</span><br><span class="line">|                     Payload Data continued ...                |</span><br><span class="line">+---------------------------------------------------------------+</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="帧头字段说明："><a href="#帧头字段说明：" class="headerlink" title="帧头字段说明："></a>帧头字段说明：</h3><ol>
@@ -380,14 +380,14 @@
 <li><p><strong>Payload data</strong>: 实际数据</p>
 </li>
 </ol>
-<h2 id="4-数据掩码机制"><a href="#4-数据掩码机制" class="headerlink" title="4. 数据掩码机制"></a>4. 数据掩码机制</h2><p>客户端发送到服务器的所有帧必须应用掩码：</p>
+<h2 id="数据掩码机制"><a href="#数据掩码机制" class="headerlink" title="数据掩码机制"></a>数据掩码机制</h2><p>客户端发送到服务器的所有帧必须应用掩码：</p>
 <ol>
 <li>客户端生成4字节随机掩码密钥</li>
 <li>对每个数据字节应用异或(XOR)操作:<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">转换后字节 = 原始字节 XOR 掩码密钥[i % 4]</span><br></pre></td></tr></table></figure></div></li>
 <li>服务器接收后使用相同算法解码</li>
 </ol>
 <p>掩码的主要目的是防止缓存投毒攻击，增强安全性。</p>
-<h2 id="5-WebSocket操作码详解"><a href="#5-WebSocket操作码详解" class="headerlink" title="5. WebSocket操作码详解"></a>5. WebSocket操作码详解</h2><ol>
+<h2 id="WebSocket操作码详解"><a href="#WebSocket操作码详解" class="headerlink" title="WebSocket操作码详解"></a>WebSocket操作码详解</h2><ol>
 <li><p><strong>文本帧(0x1)</strong></p>
 <ul>
 <li>包含UTF-8编码文本</li>
@@ -419,14 +419,14 @@
 </ul>
 </li>
 </ol>
-<h2 id="6-数据分片"><a href="#6-数据分片" class="headerlink" title="6. 数据分片"></a>6. 数据分片</h2><p>大型消息可分片发送:</p>
+<h2 id="数据分片"><a href="#数据分片" class="headerlink" title="数据分片"></a>数据分片</h2><p>大型消息可分片发送:</p>
 <ul>
 <li>首帧设置适当的opcode(1:文本或2:二进制)</li>
 <li>中间帧opcode为0(继续帧)</li>
 <li>最后一帧FIN&#x3D;1</li>
 <li>只有首帧设置有效opcode，接收方需重组完整消息</li>
 </ul>
-<h2 id="7-WebSocket实现注意事项"><a href="#7-WebSocket实现注意事项" class="headerlink" title="7. WebSocket实现注意事项"></a>7. WebSocket实现注意事项</h2><ol>
+<h2 id="WebSocket实现注意事项"><a href="#WebSocket实现注意事项" class="headerlink" title="WebSocket实现注意事项"></a>WebSocket实现注意事项</h2><ol>
 <li><p><strong>连接管理</strong></p>
 <ul>
 <li>维护活跃连接列表</li>
@@ -450,7 +450,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="8-WebSocket与HTTP-2-0比较"><a href="#8-WebSocket与HTTP-2-0比较" class="headerlink" title="8. WebSocket与HTTP&#x2F;2.0比较"></a>8. WebSocket与HTTP&#x2F;2.0比较</h2><table>
+<h2 id="WebSocket与HTTP-2-0比较"><a href="#WebSocket与HTTP-2-0比较" class="headerlink" title="WebSocket与HTTP&#x2F;2.0比较"></a>WebSocket与HTTP&#x2F;2.0比较</h2><table>
 <thead>
 <tr>
 <th>特性</th>
@@ -484,7 +484,7 @@
 <td>有限支持</td>
 </tr>
 </tbody></table>
-<h2 id="9-应用场景"><a href="#9-应用场景" class="headerlink" title="9. 应用场景"></a>9. 应用场景</h2><p>WebSocket特别适合以下场景:</p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>WebSocket特别适合以下场景:</p>
 <ul>
 <li>实时协作平台</li>
 <li>游戏和多媒体应用</li>
@@ -494,7 +494,7 @@
 <li>物联网设备通信</li>
 <li>日志实时监控(如您的应用)</li>
 </ul>
-<h2 id="10-浏览器支持和兼容性"><a href="#10-浏览器支持和兼容性" class="headerlink" title="10. 浏览器支持和兼容性"></a>10. 浏览器支持和兼容性</h2><p>现代浏览器都很好地支持WebSocket:</p>
+<h2 id="浏览器支持和兼容性"><a href="#浏览器支持和兼容性" class="headerlink" title="浏览器支持和兼容性"></a>浏览器支持和兼容性</h2><p>现代浏览器都很好地支持WebSocket:</p>
 <ul>
 <li>Chrome 4+</li>
 <li>Firefox 4+</li>
@@ -523,7 +523,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-11 00:35:12
+                    :</strong> 2025-05-14 00:24:31
             </li>
         
         <li>
@@ -641,7 +641,7 @@
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
 		<div class="page-title">WebSocket协议详解</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WebSocket%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3"><span class="nav-text">WebSocket协议详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-WebSocket%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">1. WebSocket协议基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-WebSocket%E6%8F%A1%E6%89%8B%E8%BF%87%E7%A8%8B"><span class="nav-text">2. WebSocket握手过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-text">客户端请求示例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-text">服务器响应示例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-WebSocket%E5%B8%A7%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3"><span class="nav-text">3. WebSocket帧格式详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A7%E5%A4%B4%E5%AD%97%E6%AE%B5%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="nav-text">帧头字段说明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%95%B0%E6%8D%AE%E6%8E%A9%E7%A0%81%E6%9C%BA%E5%88%B6"><span class="nav-text">4. 数据掩码机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-WebSocket%E6%93%8D%E4%BD%9C%E7%A0%81%E8%AF%A6%E8%A7%A3"><span class="nav-text">5. WebSocket操作码详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%95%B0%E6%8D%AE%E5%88%86%E7%89%87"><span class="nav-text">6. 数据分片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-WebSocket%E5%AE%9E%E7%8E%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">7. WebSocket实现注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-WebSocket%E4%B8%8EHTTP-2-0%E6%AF%94%E8%BE%83"><span class="nav-text">8. WebSocket与HTTP&#x2F;2.0比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">9. 应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%94%AF%E6%8C%81%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-text">10. 浏览器支持和兼容性</span></a></li></ol></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WebSocket%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3"><span class="nav-text">WebSocket协议详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">WebSocket协议基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket%E6%8F%A1%E6%89%8B%E8%BF%87%E7%A8%8B"><span class="nav-text">WebSocket握手过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-text">客户端请求示例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-text">服务器响应示例：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket%E5%B8%A7%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3"><span class="nav-text">WebSocket帧格式详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A7%E5%A4%B4%E5%AD%97%E6%AE%B5%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="nav-text">帧头字段说明：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%8E%A9%E7%A0%81%E6%9C%BA%E5%88%B6"><span class="nav-text">数据掩码机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket%E6%93%8D%E4%BD%9C%E7%A0%81%E8%AF%A6%E8%A7%A3"><span class="nav-text">WebSocket操作码详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E7%89%87"><span class="nav-text">数据分片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket%E5%AE%9E%E7%8E%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">WebSocket实现注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket%E4%B8%8EHTTP-2-0%E6%AF%94%E8%BE%83"><span class="nav-text">WebSocket与HTTP&#x2F;2.0比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%94%AF%E6%8C%81%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-text">浏览器支持和兼容性</span></a></li></ol></li></ol>
 
 	</div>
 </div>
@@ -668,11 +668,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 8 篇文章
+                        共撰写了 9 篇文章
                     </span>
                     
                         <span>
-                            共 31.2k 字
+                            共 33.6k 字
                         </span>
                     
                 </p>
