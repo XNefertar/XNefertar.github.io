@@ -30,9 +30,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-05-17T04:20:30.000Z">
-<meta property="article:modified_time" content="2025-05-17T16:59:50.495Z">
+<meta property="article:modified_time" content="2025-05-18T16:42:29.177Z">
 <meta property="article:author" content="XNefertar">
-<meta property="article:tag" content="Algorithm">
+<meta property="article:tag" content="Algorithm and Data Structure">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://xnefertar.github.io/images/redefine-og.webp">
     
@@ -282,7 +282,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -341,8 +341,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-18 00:59:50</span>
-            <span class="mobile">2025-05-18 00:59:50</span>
+            <span class="desktop">2025-05-19 00:42:29</span>
+            <span class="mobile">2025-05-19 00:42:29</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -354,7 +354,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Algorithm/">Algorithm</a>&nbsp;
+                        <a href="/tags/Algorithm-and-Data-Structure/">Algorithm and Data Structure</a>&nbsp;
                     </li>
                 
             </ul>
@@ -364,7 +364,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.1k 字</span>
         </span>
     
     
@@ -417,6 +417,9 @@
 <p>注意，因为<strong>队列先进先出</strong>的特性，不可以用来设计并完成对二叉树的<strong>深度优先遍历</strong>，因为它无法对子树进行递归深入，而只有栈可以完成对应的操作；</p>
 </blockquote>
 <h2 id="中序遍历（In-Order）"><a href="#中序遍历（In-Order）" class="headerlink" title="中序遍历（In-Order）"></a>中序遍历（In-Order）</h2><p>简单来说，就是<code>左子树 -&gt; 根节点 -&gt; 右子树</code></p>
+<blockquote>
+<p>对于一个二叉搜索树来说，中序遍历的结果是一个有序数组（升序）</p>
+</blockquote>
 <p><em><strong>递归实现</strong></em></p>
 <div class="code-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">inorderRecursive</span><span class="params">(TreeNode* node, vector&lt;<span class="type">int</span>&gt;&amp; res)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!node) <span class="keyword">return</span>;                  </span><br><span class="line">    <span class="built_in">inorderRecursive</span>(node-&gt;left, res);  <span class="comment">// 1. 遍历左子树</span></span><br><span class="line">    res.<span class="built_in">push_back</span>(node-&gt;val);           <span class="comment">// 2. 访问根节点</span></span><br><span class="line">    <span class="built_in">inorderRecursive</span>(node-&gt;right, res); <span class="comment">// 3. 遍历右子树</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
@@ -437,7 +440,7 @@
 </ul>
 <h2 id="层序遍历（Level-Order）"><a href="#层序遍历（Level-Order）" class="headerlink" title="层序遍历（Level-Order）"></a>层序遍历（Level-Order）</h2><p>这是广度优先遍历的应用，需要通过队列模拟实现</p>
 <p><em><strong>迭代实现</strong></em></p>
-<div class="code-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">levelorderIterative</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">nullptr</span>) <span class="keyword">return</span> res;</span><br><span class="line">    queue&lt;TreeNode*&gt; que;</span><br><span class="line">    que.<span class="built_in">push</span>(root);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// size 表示每一层的大小</span></span><br><span class="line">    <span class="keyword">while</span>(!que.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		<span class="type">int</span> size = que.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; ++i)&#123;</span><br><span class="line">            TreeNode* top = que.<span class="built_in">front</span>(); que.<span class="built_in">pop</span>();</span><br><span class="line">            res.<span class="built_in">push_back</span>(top-&gt;val);</span><br><span class="line">            <span class="keyword">if</span>(top-&gt;left) que.<span class="built_in">push</span>(top-&gt;left);</span><br><span class="line">            <span class="keyword">if</span>(top-&gt;right) que.<span class="built_in">push</span>(top-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">levelorderIterative</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">nullptr</span>) <span class="keyword">return</span> res;</span><br><span class="line">    queue&lt;TreeNode*&gt; que;</span><br><span class="line">    que.<span class="built_in">push</span>(root);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// size 表示每一层的大小</span></span><br><span class="line">    <span class="keyword">while</span>(!que.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		<span class="type">int</span> size = que.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; ++i)&#123;</span><br><span class="line">            <span class="comment">// size 表示的就是每一层的元素数量</span></span><br><span class="line">            TreeNode* top = que.<span class="built_in">front</span>(); que.<span class="built_in">pop</span>();</span><br><span class="line">            res.<span class="built_in">push_back</span>(top-&gt;val);</span><br><span class="line">            <span class="keyword">if</span>(top-&gt;left) que.<span class="built_in">push</span>(top-&gt;left);</span><br><span class="line">            <span class="keyword">if</span>(top-&gt;right) que.<span class="built_in">push</span>(top-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p><em><strong>递归实现（基于深度／层数）</strong></em></p>
 <div class="code-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过引入depth变量</span></span><br><span class="line"><span class="comment">// 对每次遍历的结果进行分层</span></span><br><span class="line"><span class="comment">// 从而通过递归实现层序遍历</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfsLevel</span><span class="params">(TreeNode* node, <span class="type">int</span> depth, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; res)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!node) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (depth == res.<span class="built_in">size</span>())</span><br><span class="line">        res.<span class="built_in">push_back</span>(&#123;&#125;);            		<span class="comment">// 新层时创建新子数组</span></span><br><span class="line">    res[depth].<span class="built_in">push_back</span>(node-&gt;val);</span><br><span class="line">    <span class="built_in">dfsLevel</span>(node-&gt;left,  depth<span class="number">+1</span>, res);	<span class="comment">// 访问对应深度的左子树, 深度递增</span></span><br><span class="line">    <span class="built_in">dfsLevel</span>(node-&gt;right, depth<span class="number">+1</span>, res);	<span class="comment">// 访问对应深度的右子树, 深度递增</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">levelOrderRecursive</span>(TreeNode* root) &#123;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; res;</span><br><span class="line">    <span class="built_in">dfsLevel</span>(root, <span class="number">0</span>, res);</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
@@ -456,7 +459,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-18 00:59:50
+                    :</strong> 2025-05-19 00:42:29
             </li>
         
         <li>
@@ -482,7 +485,7 @@
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/Algorithm/">#Algorithm</a>&nbsp;
+				<a href="/tags/Algorithm-and-Data-Structure/">#Algorithm and Data Structure</a>&nbsp;
 			</li>
 			
 		</ul>
