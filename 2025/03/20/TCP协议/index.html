@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-03-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-20T13:50:49.351Z">
+<meta property="article:modified_time" content="2025-05-20T15:15:28.689Z">
 <meta property="article:author" content="XNefertar">
 <meta property="article:tag" content="Network">
 <meta name="twitter:card" content="summary">
@@ -341,8 +341,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-20 21:50:49</span>
-            <span class="mobile">2025-05-20 21:50:49</span>
+            <span class="desktop">2025-05-20 23:15:28</span>
+            <span class="mobile">2025-05-20 23:15:28</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -364,12 +364,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.6k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.7k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>12 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>13 分钟</span>
         </span>
     
     
@@ -403,7 +403,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./PNG/png0.png"
+                     data-src="D:\GitHub\Repositories\Daily_Learning_Records\PNG\png0.png"
                       alt="image-20241022223419900"
                 ></p>
 <ul>
@@ -477,7 +477,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./PNG/png1.png"
+                     data-src="D:\GitHub\Repositories\Daily_Learning_Records\PNG\png1.png"
                       alt="TCP_Connection"
                 ></p>
 <h3 id="TCP的四次挥手"><a href="#TCP的四次挥手" class="headerlink" title="TCP的四次挥手"></a>TCP的四次挥手</h3><p>TCP断开连接的方式和建立类似，不过采用的是<strong>四次挥手（两次请求，两次确认</strong>）的机制：</p>
@@ -533,7 +533,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./PNG/png2.png"
+                     data-src="D:\GitHub\Repositories\Daily_Learning_Records\PNG\png2.png"
                       alt="image-20241022232637519"
                 ></p>
 <h2 id="TCP的机制"><a href="#TCP的机制" class="headerlink" title="TCP的机制"></a>TCP的机制</h2><h3 id="确认应答机制（ACK）"><a href="#确认应答机制（ACK）" class="headerlink" title="确认应答机制（ACK）"></a>确认应答机制（ACK）</h3><p>TCP会对每个字节的数据进行编号，称为<strong>序列号</strong>，而ACK的确认序号，就是传入数据序列化 + 1，表示在这一序列号前的所有数据已被正确接收，这一机制对后续的超时重传和拥塞控制的实现都极为重要；</p>
@@ -567,20 +567,28 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/./PNG/png3.png"
+                     data-src="D:\GitHub\Repositories\Daily_Learning_Records\PNG\png3.png"
                       alt="image-20241024161027249"
                 ></p>
 <h4 id="详解TIME-WAIT状态"><a href="#详解TIME-WAIT状态" class="headerlink" title="详解TIME_WAIT状态"></a>详解TIME_WAIT状态</h4><p>注意，在客户端接收到服务端的FIN报文后，并没有立即退出，而是处于TIME_WAIT并持续一段时间（<strong>2 * MSL</strong>，<strong>MSL</strong>, <em>Maximum Segment Life</em>，<strong>报文段最大生存时间</strong>），才能完全关闭，MSL是TCP报文在网络中的最大生存时间（标准文档RFC 1122的建议是2min）；</p>
 <p>下面来说明TIME_WAIT状态存在的意义：</p>
 <blockquote>
 <ol>
-<li>可靠的终止TCP终止连接；</li>
+<li>可靠的终止TCP连接；</li>
 <li>保证未及时到达终端的TCP报文段有足够的时间被识别并丢弃；</li>
 </ol>
 </blockquote>
 <p>对于第一点：如果报文段7丢失，会触发超时重传机制，如果客户端过早的退出，服务端向客户端重传FIN请求，而客户端会以复位段报文处理该请求，而对服务器来说会导致错误；</p>
 <p>对于第二点：当客户端过早退出时，一些还未及时传送到客户端的数据会停留在通信管道中，等待清理，此时如果立即在同一个客户端端口向服务端发起连接请求（需要强制绑定对应端口，因为客户端采用的是随机端口号，如果不想强制绑定端口号，可以由服务端首先向客户端发送FIN…），会导致上次残留数据向当前客户端传送（即“迟到的报文”），这显然是不合理的，所以要求具有一定的缓冲时间，用于清除通信管道中的残留数据；</p>
-<p>最后在再解释一下为什么是2 _MSL——因为MSL表示TLC报文段在网络中的最大生存时间，所以使用2* MSL将保证任何报文传送在该时间段内必然会完成，且那些未及时传送到对端的数据会被_中转路由器_完全丢弃，从而避免上述问题；</p>
+<p><strong>为什么是<code>2 * MSL</code>时间</strong></p>
+<ol>
+<li><p>为了<strong>可靠的终止TCP连接</strong>：<br>首先<strong>ACK报文是不可靠</strong>的，因为TCP<strong>不负责ACK报文的重传行为</strong>，所以最后一个ACK报文可能会发生丢包触发对端的FIN重传行为，而ACK传到对端的时间是<code>1 * MSL</code>，对端重传的FIN报文也是<code>1 * MSL</code>，综合二者，如果<strong>超出了2 * MSL时间段，说明ACK报文是一定被对端接收</strong>，随即本端关闭连接</p>
+</li>
+<li><p>为了保证旧连接的数据不会干扰新连接的数据传输</p>
+<p><strong>对端 -&gt; 本端数据：1 * MSL</strong><br><strong>本端 -&gt; 对端数据：1 * MSL</strong></p>
+<p>所以2 * MSL可以<strong>保证任何方向的数据都已经处理完成</strong>，不会影响后续新连接的建立</p>
+</li>
+</ol>
 <h4 id="如何解决因TIME-WAIT状态导致的端口不可用"><a href="#如何解决因TIME-WAIT状态导致的端口不可用" class="headerlink" title="如何解决因TIME_WAIT状态导致的端口不可用"></a>如何解决因TIME_WAIT状态导致的端口不可用</h4><p>这里介绍一个方法——socket 复用：</p>
 <p>在建立socket的函数调用中，可以采用复用机制避免因端口不可用问题——其本质就是允许多个进程绑定同一个端口号，具体实现如下：</p>
 <div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> opt = <span class="number">1</span>;</span><br><span class="line">setsockopt(socket_fd, SOL_SOCKET, SO_REUSEADDR, &amp;opt, <span class="keyword">sizeof</span>(opt));</span><br></pre></td></tr></table></figure></div>
@@ -599,7 +607,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-20 21:50:49
+                    :</strong> 2025-05-20 23:15:28
             </li>
         
         <li>
@@ -748,7 +756,7 @@
                     </span>
                     
                         <span>
-                            共 54.3k 字
+                            共 54.4k 字
                         </span>
                     
                 </p>
