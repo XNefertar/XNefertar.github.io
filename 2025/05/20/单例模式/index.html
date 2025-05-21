@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-05-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-21T16:16:20.902Z">
+<meta property="article:modified_time" content="2025-05-21T16:20:39.624Z">
 <meta property="article:author" content="XNefertar">
 <meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
@@ -341,8 +341,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-22 00:16:20</span>
-            <span class="mobile">2025-05-22 00:16:20</span>
+            <span class="desktop">2025-05-22 00:20:39</span>
+            <span class="mobile">2025-05-22 00:20:39</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -403,7 +403,7 @@
 <h4 id="双重锁检查机制（DCL-Double-Check-Lock）"><a href="#双重锁检查机制（DCL-Double-Check-Lock）" class="headerlink" title="双重锁检查机制（DCL, Double-Check Lock）"></a>双重锁检查机制（DCL, Double-Check Lock）</h4><div class="code-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Singleton</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">Singleton</span>() &#123;&#125;</span><br><span class="line">    ~<span class="built_in">Singleton</span>() &#123;&#125;</span><br><span class="line">    <span class="built_in">Singleton</span>(<span class="type">const</span> Singleton&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">    Singleton&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Singleton&amp;) = <span class="keyword">delete</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">static</span> Singleton* instance;</span><br><span class="line">    <span class="type">static</span> std::mutex mtx;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">static</span> Singleton* <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!instance) &#123;                  <span class="comment">// 第一重检查</span></span><br><span class="line">            <span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lk</span><span class="params">(mtx)</span></span>;</span><br><span class="line">            <span class="keyword">if</span> (!instance) &#123;              <span class="comment">// 第二重检查</span></span><br><span class="line">                instance = <span class="keyword">new</span> <span class="built_in">Singleton</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 定义静态成员</span></span><br><span class="line">Singleton* Singleton::instance = <span class="literal">nullptr</span>;</span><br><span class="line">std::mutex Singleton::mtx;</span><br></pre></td></tr></table></figure></div>
 
 <blockquote>
-<p>第一重检查：**性能优化，**避免即使在无条件竞争的情况下依然需要申请锁，带来不必要的性能开销（锁竞争和上下文切换）</p>
+<p>第一重检查：<strong>性能优化</strong>，避免即使在无条件竞争的情况下依然需要申请锁，带来不必要的性能开销（锁竞争和上下文切换）</p>
 <p>第二重检查：<strong>正确性保证</strong>，在锁保护的前提下再次确认<strong>未创建状态</strong>，避免多个线程重复执行<code>new Singleton()</code></p>
 </blockquote>
 <h4 id="C-11局部静态变量（Meyers’-Singleton）"><a href="#C-11局部静态变量（Meyers’-Singleton）" class="headerlink" title="C++11局部静态变量（Meyers’ Singleton）"></a>C++11局部静态变量（Meyers’ Singleton）</h4><p>这是在C++11之后支持的线程安全版本的懒汉式的单例模式，实现更为简单：</p>
@@ -423,7 +423,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-22 00:16:20
+                    :</strong> 2025-05-22 00:20:39
             </li>
         
         <li>
