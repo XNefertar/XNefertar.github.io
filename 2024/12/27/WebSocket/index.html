@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2024-12-27T05:15:00.000Z">
-<meta property="article:modified_time" content="2025-05-13T16:24:31.712Z">
+<meta property="article:modified_time" content="2025-05-22T13:00:33.194Z">
 <meta property="article:author" content="XNefertar">
 <meta property="article:tag" content="NetWork">
 <meta name="twitter:card" content="summary">
@@ -341,8 +341,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-14 00:24:31</span>
-            <span class="mobile">2025-05-14 00:24:31</span>
+            <span class="desktop">2025-05-22 21:33</span>
+            <span class="mobile">2025-05-22 21:33</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -388,31 +388,31 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="WebSocket协议详解"><a href="#WebSocket协议详解" class="headerlink" title="WebSocket协议详解"></a>WebSocket协议详解</h1><p>WebSocket是一种在单个TCP连接上提供全双工通信的网络协议，允许服务器主动向客户端推送数据。下面详细介绍WebSocket协议的格式和相关知识。</p>
-<h2 id="WebSocket协议基本概念"><a href="#WebSocket协议基本概念" class="headerlink" title="WebSocket协议基本概念"></a>WebSocket协议基本概念</h2><p>WebSocket协议由IETF标准RFC 6455定义，主要特点：</p>
+			<h1 id="WebSocket协议详解"><a href="#WebSocket协议详解" class="headerlink" title="WebSocket协议详解"></a>WebSocket协议详解</h1><p>WebSocket是一种在单个TCP连接上提供<strong>全双工通信</strong>的网络协议，允许<strong>服务器主动向客户端推送数据</strong>。下面详细介绍WebSocket协议的格式和相关知识。</p>
+<h2 id="WebSocket协议基本概念"><a href="#WebSocket协议基本概念" class="headerlink" title="WebSocket协议基本概念"></a>WebSocket协议基本概念</h2><p>WebSocket协议由<strong>IETF标准RFC 6455</strong>定义，主要特点：</p>
 <ul>
-<li>基于TCP的全双工通信</li>
-<li>持久连接，避免多次握手</li>
-<li>浏览器原生支持</li>
-<li>数据格式轻量，相比HTTP头部开销小</li>
-<li>支持二进制和文本数据传输</li>
+<li>基于TCP的<strong>全双工通信</strong></li>
+<li><strong>持久连接</strong>，避免多次握手</li>
+<li>浏览器<strong>原生支持</strong></li>
+<li>数据格式<strong>轻量</strong>，相比HTTP头部开销小</li>
+<li>支持<strong>二进制和文本</strong>数据传输</li>
 </ul>
-<h2 id="WebSocket握手过程"><a href="#WebSocket握手过程" class="headerlink" title="WebSocket握手过程"></a>WebSocket握手过程</h2><p>WebSocket连接建立需要通过HTTP升级机制：</p>
-<h3 id="客户端请求示例："><a href="#客户端请求示例：" class="headerlink" title="客户端请求示例："></a>客户端请求示例：</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET /ws HTTP/1.1</span><br><span class="line">Host: server.example.com</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==</span><br><span class="line">Sec-WebSocket-Version: 13</span><br></pre></td></tr></table></figure></div>
+<h2 id="WebSocket握手过程"><a href="#WebSocket握手过程" class="headerlink" title="WebSocket握手过程"></a>WebSocket握手过程</h2><p>WebSocket连接建立需要通过<strong>HTTP升级机制</strong>：</p>
+<h3 id="客户端请求示例："><a href="#客户端请求示例：" class="headerlink" title="客户端请求示例："></a>客户端请求示例：</h3><div class="code-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/ws</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>server.example.com</span><br><span class="line"><span class="attribute">Upgrade</span><span class="punctuation">: </span>websocket</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>Upgrade</span><br><span class="line"><span class="attribute">Sec-WebSocket-Key</span><span class="punctuation">: </span>dGhlIHNhbXBsZSBub25jZQ==</span><br><span class="line"><span class="attribute">Sec-WebSocket-Version</span><span class="punctuation">: </span>13</span><br></pre></td></tr></table></figure></div>
 
-<h3 id="服务器响应示例："><a href="#服务器响应示例：" class="headerlink" title="服务器响应示例："></a>服务器响应示例：</h3><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 101 Switching Protocols</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</span><br></pre></td></tr></table></figure></div>
+<h3 id="服务器响应示例："><a href="#服务器响应示例：" class="headerlink" title="服务器响应示例："></a>服务器响应示例：</h3><div class="code-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">HTTP/1.1</span> <span class="number">101</span> Switching Protocols</span><br><span class="line"><span class="attribute">Upgrade</span><span class="punctuation">: </span>websocket</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>Upgrade</span><br><span class="line"><span class="attribute">Sec-WebSocket-Accept</span><span class="punctuation">: </span>s3pPLMBiTxaQ9kYGzzhZRbK+xOo=</span><br></pre></td></tr></table></figure></div>
 
 <p>关键点：</p>
 <ul>
-<li>Sec-WebSocket-Key：客户端随机生成的Base64编码字符串</li>
-<li>Sec-WebSocket-Accept：服务器通过特定算法处理客户端提供的key<ul>
+<li><strong>Sec-WebSocket-Key</strong>：客户端随机生成的Base64编码字符串</li>
+<li><strong>Sec-WebSocket-Accept</strong>：服务器通过特定算法处理客户端提供的key<ul>
 <li>将客户端的key与固定GUID字符串”258EAFA5-E914-47DA-95CA-C5AB0DC85B11”拼接</li>
 <li>计算SHA-1哈希值</li>
 <li>对结果进行Base64编码</li>
 </ul>
 </li>
 </ul>
-<h2 id="WebSocket帧格式详解"><a href="#WebSocket帧格式详解" class="headerlink" title="WebSocket帧格式详解"></a>WebSocket帧格式详解</h2><p>WebSocket数据以帧(Frame)为单位传输，帧格式如下：</p>
+<h2 id="WebSocket帧格式详解"><a href="#WebSocket帧格式详解" class="headerlink" title="WebSocket帧格式详解"></a>WebSocket帧格式详解</h2><p>WebSocket数据以**帧(Frame)**为单位传输，帧格式如下：</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-------+-+-------------+-------------------------------+</span><br><span class="line">|F|R|R|R| opcode|M| Payload len |    Extended payload length    |</span><br><span class="line">|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |</span><br><span class="line">|N|V|V|V|       |S|             |   (if payload len==126/127)   |</span><br><span class="line">| |1|2|3|       |K|             |                               |</span><br><span class="line">+-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +</span><br><span class="line">|     Extended payload length continued, if payload len == 127  |</span><br><span class="line">+ - - - - - - - - - - - - - - - +-------------------------------+</span><br><span class="line">|                     Payload Data continued ...                |</span><br><span class="line">+---------------------------------------------------------------+</span><br></pre></td></tr></table></figure></div>
 
 <h3 id="帧头字段说明："><a href="#帧头字段说明：" class="headerlink" title="帧头字段说明："></a>帧头字段说明：</h3><ol>
@@ -429,18 +429,18 @@
 </li>
 <li><p><strong>Opcode(4位)</strong>: 操作码，标识帧类型</p>
 <ul>
-<li>0x0: 继续帧</li>
-<li>0x1: 文本帧</li>
-<li>0x2: 二进制帧</li>
-<li>0x8: 关闭连接</li>
-<li>0x9: Ping</li>
-<li>0xA: Pong</li>
+<li>0x0: <strong>继续帧</strong></li>
+<li>0x1: <strong>文本帧</strong></li>
+<li>0x2: <strong>二进制帧</strong></li>
+<li>0x8: <strong>关闭连接</strong></li>
+<li>0x9: <strong>Ping</strong></li>
+<li>0xA: <strong>Pong</strong></li>
 </ul>
 </li>
 <li><p><strong>MASK(1位)</strong>: 是否使用掩码</p>
 <ul>
-<li>客户端发送到服务器的消息必须掩码</li>
-<li>服务器发送到客户端的消息不得掩码</li>
+<li><strong>客户端发送到服务器的消息必须掩码</strong></li>
+<li><strong>服务器发送到客户端的消息不得掩码</strong></li>
 </ul>
 </li>
 <li><p><strong>Payload length(7位+扩展)</strong>: 消息长度</p>
@@ -458,17 +458,17 @@
 <li><p><strong>Payload data</strong>: 实际数据</p>
 </li>
 </ol>
-<h2 id="数据掩码机制"><a href="#数据掩码机制" class="headerlink" title="数据掩码机制"></a>数据掩码机制</h2><p>客户端发送到服务器的所有帧必须应用掩码：</p>
+<h2 id="数据掩码机制"><a href="#数据掩码机制" class="headerlink" title="数据掩码机制"></a>数据掩码机制</h2><p>客户端发送到服务器的所有帧<strong>必须应用掩码</strong>：</p>
 <ol>
-<li>客户端生成4字节随机掩码密钥</li>
-<li>对每个数据字节应用异或(XOR)操作:<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">转换后字节 = 原始字节 XOR 掩码密钥[i % 4]</span><br></pre></td></tr></table></figure></div></li>
+<li>客户端生成<strong>4字节随机掩码密钥</strong></li>
+<li>对每个数据字节应用<strong>异或(XOR)操作</strong>:<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">转换后字节 = 原始字节 XOR 掩码密钥[i % 4]</span><br></pre></td></tr></table></figure></div></li>
 <li>服务器接收后使用相同算法解码</li>
 </ol>
-<p>掩码的主要目的是防止缓存投毒攻击，增强安全性。</p>
+<p>掩码的主要目的是<strong>防止缓存投毒攻击</strong>，增强安全性。</p>
 <h2 id="WebSocket操作码详解"><a href="#WebSocket操作码详解" class="headerlink" title="WebSocket操作码详解"></a>WebSocket操作码详解</h2><ol>
 <li><p><strong>文本帧(0x1)</strong></p>
 <ul>
-<li>包含UTF-8编码文本</li>
+<li>包含<strong>UTF-8编码</strong>文本</li>
 <li>完整消息可能跨多帧</li>
 </ul>
 </li>
@@ -481,50 +481,50 @@
 <ul>
 <li>可附带状态码和文本说明</li>
 <li>常见状态码:<ul>
-<li>1000: 正常关闭</li>
-<li>1001: 离开</li>
-<li>1002: 协议错误</li>
-<li>1003: 数据类型不支持</li>
+<li>1000: <strong>正常关闭</strong></li>
+<li>1001: <strong>离开</strong></li>
+<li>1002: <strong>协议错误</strong></li>
+<li>1003: <strong>数据类型不支持</strong></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p><strong>Ping(0x9)&#x2F;Pong(0xA)</strong></p>
 <ul>
-<li>心跳检测</li>
-<li>收到Ping必须回复Pong</li>
+<li><strong>心跳检测</strong></li>
+<li>收到Ping<strong>必须回复</strong>Pong</li>
 <li>可包含应用数据</li>
 </ul>
 </li>
 </ol>
-<h2 id="数据分片"><a href="#数据分片" class="headerlink" title="数据分片"></a>数据分片</h2><p>大型消息可分片发送:</p>
+<h2 id="数据分片"><a href="#数据分片" class="headerlink" title="数据分片"></a>数据分片</h2><p>大型消息可<strong>分片发送</strong>:</p>
 <ul>
 <li>首帧设置适当的opcode(1:文本或2:二进制)</li>
 <li>中间帧opcode为0(继续帧)</li>
 <li>最后一帧FIN&#x3D;1</li>
-<li>只有首帧设置有效opcode，接收方需重组完整消息</li>
+<li>只有首帧设置有效opcode，接收方需<strong>重组完整消息</strong></li>
 </ul>
 <h2 id="WebSocket实现注意事项"><a href="#WebSocket实现注意事项" class="headerlink" title="WebSocket实现注意事项"></a>WebSocket实现注意事项</h2><ol>
 <li><p><strong>连接管理</strong></p>
 <ul>
-<li>维护活跃连接列表</li>
-<li>实现心跳检测</li>
-<li>优雅处理关闭</li>
+<li>维护<strong>活跃连接列表</strong></li>
+<li>实现<strong>心跳检测</strong></li>
+<li><strong>优雅处理关闭</strong></li>
 </ul>
 </li>
 <li><p><strong>安全性考虑</strong></p>
 <ul>
-<li>使用WSS(WebSocket Secure)</li>
-<li>验证Origin头</li>
-<li>防止资源枯竭攻击</li>
-<li>实施速率限制</li>
+<li>使用<strong>WSS(WebSocket Secure)</strong></li>
+<li>验证<strong>Origin头</strong></li>
+<li>防止<strong>资源枯竭攻击</strong></li>
+<li>实施<strong>速率限制</strong></li>
 </ul>
 </li>
 <li><p><strong>性能优化</strong></p>
 <ul>
-<li>使用事件驱动架构(如Epoll)</li>
-<li>避免频繁小消息</li>
-<li>合理配置缓冲区大小</li>
+<li>使用<strong>事件驱动架构</strong>(如Epoll)</li>
+<li>避免<strong>频繁小消息</strong></li>
+<li>合理配置<strong>缓冲区大小</strong></li>
 </ul>
 </li>
 </ol>
@@ -538,7 +538,7 @@
 </thead>
 <tbody><tr>
 <td>双向通信</td>
-<td>原生支持</td>
+<td><strong>原生支持</strong></td>
 <td>支持(PUSH)</td>
 </tr>
 <tr>
@@ -548,7 +548,7 @@
 </tr>
 <tr>
 <td>头部开销</td>
-<td>非常小</td>
+<td><strong>非常小</strong></td>
 <td>压缩减小</td>
 </tr>
 <tr>
@@ -558,19 +558,19 @@
 </tr>
 <tr>
 <td>服务推送</td>
-<td>完全支持</td>
+<td><strong>完全支持</strong></td>
 <td>有限支持</td>
 </tr>
 </tbody></table>
 <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>WebSocket特别适合以下场景:</p>
 <ul>
-<li>实时协作平台</li>
-<li>游戏和多媒体应用</li>
-<li>股票交易和金融数据</li>
-<li>聊天应用</li>
-<li>社交媒体实时通知</li>
-<li>物联网设备通信</li>
-<li>日志实时监控(如您的应用)</li>
+<li><strong>实时协作平台</strong></li>
+<li><strong>游戏和多媒体应用</strong></li>
+<li><strong>股票交易和金融数据</strong></li>
+<li><strong>聊天应用</strong></li>
+<li><strong>社交媒体实时通知</strong></li>
+<li><strong>物联网设备通信</strong></li>
+<li><strong>日志实时监控</strong>(如您的应用)</li>
 </ul>
 <h2 id="浏览器支持和兼容性"><a href="#浏览器支持和兼容性" class="headerlink" title="浏览器支持和兼容性"></a>浏览器支持和兼容性</h2><p>现代浏览器都很好地支持WebSocket:</p>
 <ul>
@@ -579,14 +579,13 @@
 <li>Safari 5+</li>
 <li>Edge&#x2F;IE 10+</li>
 </ul>
-<p>对于不支持WebSocket的环境，可使用的回退技术:</p>
+<p>对于不支持WebSocket的环境，可使用的<strong>回退技术</strong>:</p>
 <ul>
-<li>长轮询</li>
-<li>SSE (Server-Sent Events)</li>
+<li><strong>长轮询</strong></li>
+<li><strong>SSE (Server-Sent Events)</strong></li>
 <li>Flash Socket</li>
 </ul>
-<p>您的EpollServer实现展示了WebSocket协议的完整处理流程，包括握手、帧解析和发送，以及各种操作码的处理，是WebSocket协议的一个很好的工程实现案例。</p>
-<p>找到具有 2 个许可证类型的类似代码</p>
+<p>您的EpollServer实现展示了WebSocket协议的<strong>完整处理流程</strong>，包括握手、帧解析和发送，以及各种操作码的处理，是WebSocket协议的一个很好的工程实现案例。</p>
 
 		</div>
 
@@ -601,7 +600,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-14 00:24:31
+                    :</strong> 2025-05-22 21:00:33
             </li>
         
         <li>

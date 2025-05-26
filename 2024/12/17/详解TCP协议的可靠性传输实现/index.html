@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2024-12-17T05:14:00.000Z">
-<meta property="article:modified_time" content="2025-05-15T04:09:55.482Z">
+<meta property="article:modified_time" content="2025-05-26T14:21:05.977Z">
 <meta property="article:author" content="XNefertar">
 <meta property="article:tag" content="NetWork">
 <meta name="twitter:card" content="summary">
@@ -341,8 +341,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-15 12:09:55</span>
-            <span class="mobile">2025-05-15 12:09:55</span>
+            <span class="desktop">2025-05-26 22:21:05</span>
+            <span class="mobile">2025-05-26 22:21:05</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -415,7 +415,7 @@
 </ul>
 <h4 id="序列号的递增"><a href="#序列号的递增" class="headerlink" title="序列号的递增"></a>序列号的递增</h4><ul>
 <li>一旦连接建立，发送方发送数据时，后续TCP段的序列号会<strong>基于已发送的数据量进行递增</strong>。</li>
-<li>例如：如果一方选择的ISN是 <code>X</code>，它发送的第一个TCP段包含1000字节的数据，那么该段的序列号就是 <code>X</code>。如果下一个段紧接着这1000字节发送，并且包含500字节的数据，那么第二个段的序列号就是 <code>X + 1000</code>。</li>
+<li>例如：如果一方选择的ISN是 <code>X</code>，它发送的第一个TCP段包含1000字节的数据，那么该段的序列号就是 <code>X</code>。如果下一个段紧接着这1000字节发送，并且包含500字节的数据，那么第二个段的序列号就是 <code>X + 1001</code>。</li>
 <li>即使TCP段不携带数据（例如<strong>纯ACK段</strong>），有时<strong>也可能消耗一个序列号</strong>（如SYN和FIN段），但通常携带数据的段的序列号是根据其数据部分的第一个字节来确定的。<ul>
 <li><strong>普通数据段</strong>：<ul>
 <li>序列号 &#x3D; 该段中第一个字节在整个数据流中的位置</li>
@@ -474,7 +474,7 @@
 <li>此时，发送方就会 <strong>重新发送</strong> 那个被认为丢失的数据段。</li>
 </ul>
 <h4 id="重传超时时间-Retransmission-Timeout-RTO"><a href="#重传超时时间-Retransmission-Timeout-RTO" class="headerlink" title="重传超时时间 (Retransmission Timeout, RTO)"></a>重传超时时间 (Retransmission Timeout, RTO)</h4><ul>
-<li>这个计时器的时长，即<code>RTO</code>，的设定至关重要。<ul>
+<li>这个计时器的时长，即<code>RTO</code>的设定至关重要。<ul>
 <li><strong>太短：</strong> 可能导致不必要的重传。网络可能只是暂时拥堵导致延迟，数据并未丢失，过早重传会浪费带宽，甚至加剧拥塞。</li>
 <li><strong>太长：</strong> 会导致数据丢失后需要等待很长时间才进行重传，降低了数据传输的效率和吞吐量。</li>
 </ul>
@@ -492,9 +492,7 @@
 <li>这种“指数退避”策略的目的是：如果超时是由于网络拥塞引起的，快速连续地重传只会让网络更加拥堵。<strong>通过延长等待时间，给网络一个恢复的机会</strong>。</li>
 <li>一旦收到了对重传数据的确认，RTO的计算会<strong>恢复到基于SRTT和RTTVAR的正常方式</strong>。</li>
 </ul>
-<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul>
-<li>超时重传的主要缺点是<strong>反应较慢</strong>。必须<strong>等待整个RTO时间</strong>过去才能发现和处理丢包，尤其在RTT较大的网络中，这个等待时间可能很长，<strong>导致连接<code>停顿</code>，吞吐量显著下降</strong>。</li>
-</ul>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>​	超时重传的主要缺点是<strong>反应较慢</strong>。必须<strong>等待整个RTO时间</strong>过去才能发现和处理丢包，尤其在RTT较大的网络中，这个等待时间可能很长，<strong>导致连接<code>停顿</code>，吞吐量显著下降</strong>。</p>
 <h3 id="快速重传"><a href="#快速重传" class="headerlink" title="快速重传"></a>快速重传</h3><h4 id="机制原理-1"><a href="#机制原理-1" class="headerlink" title="机制原理"></a>机制原理</h4><ul>
 <li>快速重传机制旨在 <strong>更快地</strong> 检测和恢复丢失的数据段，尤其是在只有少量数据段丢失，而其后的数据段仍然能够到达接收方的情况下。它是一种优化，试图避免等待漫长的RTO。</li>
 <li>它的触发条件 <strong>不是计时器超时</strong>，而是发送方 <strong>收到</strong> 了来自接收方的 <strong>重复确认 (Duplicate ACKs)</strong>。</li>
@@ -511,23 +509,15 @@
 </li>
 <li>这些<code>ACK=200</code>的确认被称为重复确认，因为它们都在重复确认<code>Seq=100</code>及之前的数据。</li>
 </ul>
-<h4 id="触发条件"><a href="#触发条件" class="headerlink" title="触发条件"></a>触发条件</h4><ul>
-<li>TCP发送方通常在 <strong>连续收到三个或以上</strong> 的重复ACK时，会触发快速重传机制。（即收到了原始ACK之外的3个重复ACK，总共4个具有相同确认号的ACK）。</li>
-<li><strong>为什么是3个</strong><ul>
+<h4 id="触发条件"><a href="#触发条件" class="headerlink" title="触发条件"></a>触发条件</h4><p>TCP发送方通常在 <strong>连续收到三个或以上</strong> 的重复ACK时，会触发快速重传机制。（即收到了原始ACK之外的3个重复ACK，总共4个具有相同确认号的ACK）。</p>
+<p><strong>为什么是3个</strong></p>
+<ul>
 <li>收到<strong>1或2个重复ACK可能是由于网络中的轻微乱序</strong>造成的，不一定代表丢包。</li>
 <li>收到<strong>3个重复ACK则强烈暗示<code>Seq=200</code>很可能丢失</strong>，因为后面的3个段都已经到达。</li>
 </ul>
-</li>
-</ul>
-<h4 id="执行动作"><a href="#执行动作" class="headerlink" title="执行动作"></a>执行动作</h4><ul>
-<li>一旦触发快速重传，发送方就 <strong>不再等待</strong> 该数据段（这里是<code>Seq=200</code>）的重传计时器超时，而是 <strong>立即重传</strong> 那个被认为丢失的数据段（Seq&#x3D;200）。</li>
-</ul>
-<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
-<li>相比超时重传，快速重传能够 <strong>显著更快地</strong> 发现并修复丢包，尤其是在高带宽、高延迟的网络中对吞吐量的提升效果明显。它使得TCP能够在不中断数据流的情况下（不需要等待超时）恢复丢失。</li>
-</ul>
-<h4 id="与快速恢复-Fast-Recovery"><a href="#与快速恢复-Fast-Recovery" class="headerlink" title="与快速恢复 (Fast Recovery)"></a>与快速恢复 (Fast Recovery)</h4><ul>
-<li>快速重传通常与 <strong>快速恢复</strong> 算法结合使用。在快速重传一个数据段后，发送方不会像超时重传那样将拥塞窗口降得很低（例如降到1），而是采用一种更温和的方式调整拥塞窗口，试图在修复丢包的同时维持较高的数据传输速率。（<code>快速恢复算法</code>请查看<code>拥塞控制</code>章节）</li>
-</ul>
+<h4 id="执行动作"><a href="#执行动作" class="headerlink" title="执行动作"></a>执行动作</h4><p>​	一旦触发快速重传，发送方就 <strong>不再等待</strong> 该数据段（这里是<code>Seq=200</code>）的重传计时器超时，而是 <strong>立即重传</strong> 那个被认为丢失的数据段（Seq&#x3D;200）。</p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>​	相比超时重传，快速重传能够 <strong>显著更快地</strong> 发现并修复丢包，尤其是在高带宽、高延迟的网络中对吞吐量的提升效果明显。它使得TCP能够在不中断数据流的情况下（不需要等待超时）恢复丢失。</p>
+<h4 id="与快速恢复-Fast-Recovery"><a href="#与快速恢复-Fast-Recovery" class="headerlink" title="与快速恢复 (Fast Recovery)"></a>与快速恢复 (Fast Recovery)</h4><p>​	快速重传通常与 <strong>快速恢复</strong> 算法结合使用。在快速重传一个数据段后，发送方不会像超时重传那样将拥塞窗口降得很低（例如降到1），而是采用一种更温和的方式调整拥塞窗口，试图在修复丢包的同时维持较高的数据传输速率。（<code>快速恢复算法</code>请查看<code>拥塞控制</code>章节）</p>
 <h2 id="滑动窗口机制"><a href="#滑动窗口机制" class="headerlink" title="滑动窗口机制"></a>滑动窗口机制</h2><p>滑动窗口机制是TCP在数据传输过程中，用于控制发送速率与接收能力匹配的一种流量管理方式。它通过动态调整“窗口”范围，实现高效、可靠的字节流传输。</p>
 <h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p>我们分为发送方（Sender）和接收方（Receiver）两个方面介绍</p>
 <h4 id="Sender"><a href="#Sender" class="headerlink" title="Sender"></a>Sender</h4><h5 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h5><img  
@@ -916,7 +906,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-15 12:09:55
+                    :</strong> 2025-05-26 22:21:05
             </li>
         
         <li>
