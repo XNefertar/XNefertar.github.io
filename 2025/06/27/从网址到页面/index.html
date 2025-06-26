@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://xnefertar.github.io/2025/05/31/linux基本指令/"/>
+    <link rel="canonical" href="http://xnefertar.github.io/2025/06/27/从网址到页面/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,16 +23,15 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux的基本指令">
-<meta property="og:url" content="http://xnefertar.github.io/2025/05/31/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://xnefertar.github.io/2025/06/27/%E4%BB%8E%E7%BD%91%E5%9D%80%E5%88%B0%E9%A1%B5%E9%9D%A2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://xnefertar.github.io/images/redefine-og.webp">
-<meta property="article:published_time" content="2025-05-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-30T17:16:48.215Z">
+<meta property="article:published_time" content="2025-06-26T16:38:57.769Z">
+<meta property="article:modified_time" content="2025-06-26T16:32:25.916Z">
 <meta property="article:author" content="XNefertar">
-<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://xnefertar.github.io/images/redefine-og.webp">
     
@@ -46,7 +45,7 @@
     
     <title>
         
-            Linux的基本指令 | XNefertar&#39;s Blog
+            XNefertar&#39;s Blog - Redefine Your Hexo Journey.
         
     </title>
 
@@ -313,7 +312,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Linux的基本指令</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3"></h1>
 			</div>
 			
 		</div>
@@ -334,42 +333,31 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2025-05-31</span>
-        <span class="mobile">2025-05-31</span>
+        <span class="desktop">2025-06-27 00:38:57</span>
+        <span class="mobile">2025-06-27 00:38:57</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-05-31 01:16:48</span>
-            <span class="mobile">2025-05-31 01:16:48</span>
+            <span class="desktop">2025-06-27 00:32:25</span>
+            <span class="mobile">2025-06-27 00:32:25</span>
             <span class="hover-info">更新</span>
         </span>
     
 
     
     
-        <span class="article-tags article-meta-item">
-            <i class="fa-regular fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/Linux/">Linux</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.2k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.4k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>12 分钟</span>
         </span>
     
     
@@ -388,172 +376,135 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="Linux的基本指令"><a href="#Linux的基本指令" class="headerlink" title="Linux的基本指令"></a>Linux的基本指令</h1><h2 id="1-ls-指令"><a href="#1-ls-指令" class="headerlink" title="1. ls 指令"></a>1. ls 指令</h2><h3 id="语法-："><a href="#语法-：" class="headerlink" title="语法 ："></a>语法 ：</h3><p>ls  [选项]  [目录或文件] </p>
-<h3 id="功能-："><a href="#功能-：" class="headerlink" title="功能 ："></a>功能 ：</h3><p>对于目录，该命令列出该目录下的所有子目录与文件；</p>
-<p>对于文件，将列出文件名及其详细信息；</p>
-<h3 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h3><ol>
-<li>-a：显示目录下的所有文件，包含以 . 开头的隐藏文件；</li>
-<li>-d：将目录像文件一样显示，而不是显示其下的文件；</li>
-<li>-i：输出文件的 i 节点的索引信息，i 节点即 inode 编号，包含文件的属性（如文件的所有者、权限、文件大小、最后修改时间等），但不包含文件名和内容；</li>
-<li>-k：以 k 字节的形式表示文件的大小。ls –alk 指定文件；</li>
-<li>-l：列出文件的详细信息；</li>
-<li>-n：输出文件的详细信息，同时将文件所有者和组名显示为它们对应的用户ID（UID）和组ID（GID）数字，而不是通常的人类可读的用户名和组名。</li>
-<li>-F：在每个文件名后附上一个字符以说明该文件的类型，“*”表示可执行的普通文件；“&#x2F;”表示目录；“@”表 示符号链接；“|”表示FIFOs；“&#x3D;”表示套接字(sockets)。（目录类型识别）</li>
-<li>-r：对目录反向排序；</li>
-<li>-t：以时间排序；</li>
-<li>-s：在文件名后输出该文件的大小；可以通过与<code>sort</code>结合进行大小排序，快速找到目录下的最大文件；</li>
-<li>-R：列出所有子目录下的文件（递归）；</li>
-<li>-1：一行只输出一个文件；</li>
-</ol>
-<h4 id="1-UID（User-ID）"><a href="#1-UID（User-ID）" class="headerlink" title="1. UID（User ID）"></a>1. UID（User ID）</h4><ul>
-<li><strong>定义</strong>：UID 是用于唯一标识系统中每个用户的数字。</li>
-<li><strong>用途</strong>：系统通过 UID 来确定用户的身份，并控制用户对系统资源（如文件和目录）的访问权限。</li>
-<li><strong>默认值</strong>：在大多数 Linux 系统中，普通用户的 UID 通常从 1000 或 500 开始递增。<code>root</code> 用户（超级用户）的 UID 通常为 <code>0</code>，因为它具有系统的全部权限。</li>
-<li><strong>用户文件</strong>：系统中的每个用户及其对应的 UID 都记录在 <code>/etc/passwd</code> 文件中。</li>
-</ul>
-<h3 id="2-GID（Group-ID）"><a href="#2-GID（Group-ID）" class="headerlink" title="2. GID（Group ID）"></a>2. GID（Group ID）</h3><ul>
-<li><strong>定义</strong>：GID 是用于唯一标识系统中每个组的数字。</li>
-<li><strong>用途</strong>：每个用户都可以属于一个或多个组，系统通过 GID 来管理组的权限。一个文件或目录的权限可以设置为特定组成员可以访问，这些权限是基于 GID 控制的。</li>
-<li><strong>默认值</strong>：系统在创建用户时，通常也会为该用户创建一个与其 UID 相同的 GID（称为私有组），并将用户添加到该组。</li>
-<li><strong>组文件</strong>：系统中的每个组及其对应的 GID 都记录在 <code>/etc/group</code> 文件中。</li>
-</ul>
-<h2 id="2-pwd-命令"><a href="#2-pwd-命令" class="headerlink" title="2. pwd 命令"></a>2. pwd 命令</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>pwd</p>
-<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>显示用户当前所在的目录</p>
-<h2 id="3-cd-指令"><a href="#3-cd-指令" class="headerlink" title="3. cd 指令"></a>3. cd 指令</h2><p>Linux系统中，磁盘上的文件和目录被组成一棵目录树，每个节点都是目或文件；</p>
-<p>这个可以联想到平衡二叉搜索树，这样有助于快速的找到对应目录下的文件；</p>
-<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>cd [目录名]</p>
-<h3 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h3><p>改变工作目录，将当前工作目录改变到指定的目录下；</p>
-<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><ol>
-<li>cd ..：返回上级目录</li>
-<li>cd &#x2F;home&#x2F;user&#x2F;linux ：绝对路径；</li>
-<li>cd ..&#x2F;folder1：相对路径；</li>
-<li>cd ~：进入用户家目录；</li>
-<li>cd - ：返回最近访问目录；</li>
-</ol>
-<h2 id="4-touch-指令"><a href="#4-touch-指令" class="headerlink" title="4. touch 指令"></a>4. touch 指令</h2><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><p>touch [选项].. 文件..</p>
-<h3 id="功能-2"><a href="#功能-2" class="headerlink" title="功能"></a>功能</h3><p>touch命令参数可更改文档或目录的日期时间，包括存取时间和更改时间，或者新建一个不存在的文件；</p>
-<h3 id="常用选项-1"><a href="#常用选项-1" class="headerlink" title="常用选项"></a>常用选项</h3><ol>
-<li><p>-a 或 –time&#x3D;atime 或 –time&#x3D;use ：只用于更改存取时间；</p>
-</li>
-<li><p>-c 或 –no-creat ：不建立任何文档；</p>
-</li>
-<li><p>-d ：使用指定的日期时间，而非现在的时间；</p>
-</li>
-<li><p>-f ： 此参数将忽略不予处理，仅负责解决BSD版本touch指令的兼容性问题；</p>
-</li>
-<li><p>-m 或 –time&#x3D;mtime 或 –time&#x3D;modify ：只更改变变动时间；</p>
-</li>
-<li><p>-r ：把指定文档或目录的日期时间，统一设成和参考文档或目录的日期时间相同；</p>
-</li>
-<li><p>-t ：使用指定的日期时间，而非现在的时间；</p>
-<p>注意：这里的<code>-t</code>和<code>-d</code>选项虽然效果类似，但是具体实现的格式却有所不同：</p>
+			<h1 id="从输入网址到显示页面"><a href="#从输入网址到显示页面" class="headerlink" title="从输入网址到显示页面"></a>从输入网址到显示页面</h1><p>从在浏览器地址栏输入一个网址（URL）到最终看到页面，这个过程涉及到了计算机网络、操作系统、Web服务器、浏览器内核等方方面面的知识。</p>
+<hr>
+<h2 id="概览：核心四大步骤"><a href="#概览：核心四大步骤" class="headerlink" title="概览：核心四大步骤"></a>概览：核心四大步骤</h2><p>为了方便理解，我们可以先把整个过程粗略地分为四个核心阶段：</p>
 <ol>
-<li><p><code>-t</code>选项使用特定的格式指定文件的时间戳：</p>
-<p><code>touch -t [[CC]YY]MMDDhhmm[.ss] &lt;文件名&gt;</code></p>
-<p>​    <code>CC</code>：世纪（两位数，可选）</p>
-<p>​    <code>YY</code>：年份的后两位（可选）</p>
-<p>​    <code>MM</code>：月份（两位数）</p>
-<p>​    <code>DD</code>：日期（两位数）</p>
-<p>​    <code>hh</code>：小时（两位数，24 小时制）</p>
-<p>​    <code>mm</code>：分钟（两位数）</p>
-<p>​    <code>.ss</code>：秒（可选）</p>
-<p>示例：</p>
-<p><code>touch -t 202408301230.45 myfile.txt</code></p>
-</li>
-<li><p><code>-d</code> 选项允许你使用人类可读的格式来指定时间戳，可以输入自然语言格式的时间描述</p>
-<p><code>touch -d &quot;&lt;时间描述&gt;&quot; &lt;文件名&gt;</code></p>
-<p>示例：</p>
-<p><code>touch -d &quot;2024-08-30 12:30:45&quot; myfile.txt</code></p>
-<p><code>touch -d &quot;yesterday&quot; myfile.txt</code><br><code>touch -d &quot;2 days ago&quot; myfile.txt</code></p>
-</li>
+<li><strong>导航（Navigation）</strong>：浏览器根据用户输入，准备开始请求页面。核心是<strong>DNS查询</strong>，将网址（域名）转换成服务器的IP地址。</li>
+<li><strong>连接（Connection）</strong>：浏览器与目标服务器建立一个可靠的连接，通常是<strong>TCP连接</strong>，如果是HTTPS网址，还需要进行<strong>TLS握手</strong>来加密通信。</li>
+<li><strong>请求与响应（Request &amp; Response）</strong>：浏览器向服务器发送一个<strong>HTTP请求</strong>，服务器处理后返回一个<strong>HTTP响应</strong>，响应体里通常包含了页面的HTML代码。</li>
+<li><strong>渲染（Rendering）</strong>：浏览器接收到HTML后，进行解析，并请求页面所需的CSS、JavaScript、图片等资源，最终将所有内容组合、计算、绘制成我们看到的像素画面。</li>
 </ol>
-</li>
-</ol>
-<h2 id="5-mkdir-指令"><a href="#5-mkdir-指令" class="headerlink" title="5. mkdir 指令"></a>5. mkdir 指令</h2><h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><p>mkdir [选项] dir_name</p>
-<h3 id="功能-3"><a href="#功能-3" class="headerlink" title="功能"></a>功能</h3><p>在当前目录下创建一个名为<code>dirname</code>的目录</p>
-<h3 id="常用选项-2"><a href="#常用选项-2" class="headerlink" title="常用选项"></a>常用选项</h3><p>-p 或 -parent ：可以是一个路径名称，此时若路径中的某些目录尚不存在，加上此选项后裔，系统将自动建立好那些不存在的目录，即一次可以建立多个目录；</p>
-<h3 id="举例-1"><a href="#举例-1" class="headerlink" title="举例"></a>举例</h3><p><code>mkdir -p test/test1</code> ：递归建立多个目录；</p>
-<h2 id="6-rmdir-指令-rm-指令"><a href="#6-rmdir-指令-rm-指令" class="headerlink" title="6. rmdir 指令 &amp;&amp; rm 指令"></a>6. rmdir 指令 &amp;&amp; rm 指令</h2><h2 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a>rmdir</h2><p><code>rmdir</code>是一个与<code>mkdir</code>相对应的指令，即删除目录；</p>
-<h3 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h3><p>rmdir [-p] [dir_name]</p>
-<h3 id="适用对象"><a href="#适用对象" class="headerlink" title="适用对象"></a>适用对象</h3><p>具有当前目录操作权限的所有使用者</p>
-<h3 id="功能-4"><a href="#功能-4" class="headerlink" title="功能"></a>功能</h3><p>删除空目录</p>
-<h3 id="常用选项-3"><a href="#常用选项-3" class="headerlink" title="常用选项"></a>常用选项</h3><p>-p ：当子目录被删除后，如果父目录也变成空目录的话，就连带父目录一起删除（递归删除目录）</p>
-<h2 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h2><p>该指令可以同时删除文件或目录</p>
-<h3 id="语法-5"><a href="#语法-5" class="headerlink" title="语法"></a>语法</h3><p>rm [-f &#x2F; -i &#x2F; -r &#x2F; -v] [dir_name&#x2F; dir]</p>
-<h3 id="适用对象-1"><a href="#适用对象-1" class="headerlink" title="适用对象"></a>适用对象</h3><p>所有使用者</p>
-<h3 id="功能-5"><a href="#功能-5" class="headerlink" title="功能"></a>功能</h3><p>删除文件或目录</p>
-<h3 id="常用选项-4"><a href="#常用选项-4" class="headerlink" title="常用选项"></a>常用选项</h3><ol>
-<li>-f ：即使文件属性为只读（即写保护），亦可直接删除</li>
-<li>-i ：删除前逐一询问确认</li>
-<li>-r ：删除目录及其下所有文件</li>
-</ol>
-<h2 id="7-man指令"><a href="#7-man指令" class="headerlink" title="7. man指令"></a>7. man指令</h2><p>Linux的命令有很多参数，不可能完全记住，我们可以通过查看联机手册获取帮助，即使用<code>man</code>指令访问Linux手册页</p>
-<h3 id="语法-6"><a href="#语法-6" class="headerlink" title="语法"></a>语法</h3><p>man [选项] 命令</p>
-<h3 id="常用选项-5"><a href="#常用选项-5" class="headerlink" title="常用选项"></a>常用选项</h3><ol>
-<li>-k ：根据关键字搜索联机帮助</li>
-<li>num ：只在第num章节查找</li>
-<li>-a ：将所有章节都显示出来，比如有的信息会存在于多个章节中，如果不加<code>-a</code>选项则当其第一次找到时就停止，但是在<code>-a</code>选项下，会显示所有章节的内容（如果可以查询到的话）；</li>
-</ol>
-<h2 id="man手册的内容"><a href="#man手册的内容" class="headerlink" title="man手册的内容"></a>man手册的内容</h2><ol>
-<li><p><strong>第一章：用户命令（General Commands）</strong></p>
-<ul>
-<li>普通用户可以执行的命令和程序，如 <code>ls</code>、<code>echo</code> 等。</li>
-</ul>
-<p><strong>第二章：系统调用（System Calls）</strong></p>
-<ul>
-<li>内核提供的系统调用接口，如 <code>open</code>、<code>read</code>、<code>write</code> 等。</li>
-</ul>
-<p><strong>第三章：库函数（Library Functions）</strong></p>
-<ul>
-<li>C 标准库和其他库中的函数，如 <code>printf</code>、<code>malloc</code> 等。</li>
-</ul>
-<p><strong>第四章：特殊文件（Special Files）</strong></p>
-<ul>
-<li>设备文件的描述，通常在 <code>/dev</code> 目录下，如硬件设备驱动程序的接口。</li>
-</ul>
-<p><strong>第五章：文件格式（File Formats and Conventions）</strong></p>
-<ul>
-<li>配置文件、数据格式和协议的描述，如 <code>/etc/passwd</code>、<code>fstab</code> 等。</li>
-</ul>
-<p><strong>第六章：游戏（Games）</strong></p>
-<ul>
-<li>各种游戏和娱乐程序。</li>
-</ul>
-<p><strong>第七章：杂项（Miscellaneous）</strong></p>
-<ul>
-<li>与系统相关的杂项信息，包括宏包、惯例、标准等。</li>
-</ul>
-<p><strong>第八章：系统管理命令（System Administration Commands）</strong></p>
-<ul>
-<li>系统管理员使用的命令和维护工具，如 <code>ifconfig</code>、<code>iptables</code>、<code>mount</code> 等。通常只有具有管理员权限的用户才能执行这些命令。</li>
+<p>下面，我们来深入每一个阶段的细节。</p>
+<hr>
+<h2 id="步骤一：导航（Navigation）-从输入到寻址"><a href="#步骤一：导航（Navigation）-从输入到寻址" class="headerlink" title="步骤一：导航（Navigation） - 从输入到寻址"></a>步骤一：导航（Navigation） - 从输入到寻址</h2><h3 id="处理用户输入-Input-Handling"><a href="#处理用户输入-Input-Handling" class="headerlink" title="处理用户输入 (Input Handling)"></a>处理用户输入 (Input Handling)</h3><ul>
+<li><strong>你开始输入</strong>：当你开始在地址栏输入时，浏览器会立即开始工作。它会根据你的输入历史、书签、搜索建议等，提供<strong>自动补全</strong>功能。</li>
+<li><strong>判断输入类型</strong>：浏览器会判断你输入的是一个<strong>搜索关键词</strong>还是一个<strong>合法的URL</strong>。<ul>
+<li>如果是搜索词（如 “今天天气”），浏览器会将其与默认的搜索引擎（如 <code>https://www.google.com/search?q=今天天气</code>）组合成一个新的URL。</li>
+<li>如果是URL（如 <code>example.com</code> 或 <code>https://example.com</code>），浏览器会准备导航到这个地址。如果你只输入了 <code>example.com</code>，浏览器会自动为你添加协议，通常是 <code>https://</code>。</li>
 </ul>
 </li>
+</ul>
+<h3 id="URL解析-URL-Parsing"><a href="#URL解析-URL-Parsing" class="headerlink" title="URL解析 (URL Parsing)"></a>URL解析 (URL Parsing)</h3><p>当用户按下回车键，浏览器确认了要导航的URL后，会首先解析这个URL。一个标准的URL结构如下：<br><code>https://www.example.com:443/path/to/page?query=string#section1</code></p>
+<ul>
+<li><strong><code>https</code></strong>: <strong>协议 (Protocol&#x2F;Scheme)</strong> - 告诉浏览器用什么方式去访问资源。常见有<code>HTTP</code>, <code>HTTPS</code>, <code>FTP</code>等。</li>
+<li><strong><code>www.example.com</code></strong>: <strong>主机名&#x2F;域名 (Hostname&#x2F;Domain)</strong> - 这是我们要找的服务器在互联网上的名字。</li>
+<li><strong><code>:443</code></strong>: <strong>端口 (Port)</strong> - 服务器上不同服务的数字“门牌号”。<code>HTTP</code> 默认是 <code>80</code>，<code>HTTPS</code> 默认是 <code>443</code>。如果URL中省略了端口，浏览器会使用默认端口。</li>
+<li><strong><code>/path/to/page</code></strong>: <strong>路径 (Path)</strong> - 请求服务器上哪个具体的文件或资源。</li>
+<li><strong><code>?query=string</code></strong>: <strong>查询字符串 (Query String)</strong> - 向服务器传递的额外参数，通常用于动态页面。</li>
+<li><strong><code>#section1</code></strong>: <strong>片段&#x2F;锚点 (Fragment)</strong> - 用于定位到页面的特定部分。<strong>重要：</strong> 这部分内容<strong>不会</strong>发送给服务器，它完全由浏览器在前端处理。</li>
+</ul>
+<h3 id="DNS查询-DNS-Lookup-核心中的核心"><a href="#DNS查询-DNS-Lookup-核心中的核心" class="headerlink" title="DNS查询 (DNS Lookup) - 核心中的核心"></a>DNS查询 (DNS Lookup) - 核心中的核心</h3><p>计算机网络通信只认<strong>IP地址</strong>（比如 <code>192.0.2.1</code>），不认域名（<code>www.example.com</code>）。因此，浏览器必须先通过DNS（Domain Name System，域名系统）将域名转换成IP地址。这个过程就像查电话本。</p>
+<p>DNS查询是一个<strong>分级缓存</strong>和<strong>递归查询</strong>的过程，为了性能，浏览器会按以下顺序查找：</p>
+<ol>
+<li><strong>浏览器缓存 (Browser Cache)</strong>：浏览器会先在自己的缓存里找，看最近有没有访问过这个域名。这是最快的一步。</li>
+<li><strong>操作系统缓存 (OS Cache)</strong>：如果浏览器缓存没有，会查询操作系统的缓存。Windows的<code>ipconfig /displaydns</code>，Linux&#x2F;Mac的<code>hosts</code>文件都属于这一层。</li>
+<li><strong>路由器缓存 (Router Cache)</strong>：请求会发送到你的路由器，路由器通常也有自己的DNS缓存。</li>
+<li><strong>ISP DNS服务器缓存 (ISP’s DNS Server Cache)</strong>：如果以上都没有，请求会发送到你的网络服务提供商（ISP，如中国电信、联通）的DNS服务器。这里缓存了大量常用域名的IP地址。</li>
 </ol>
-<h2 id="cp-指令"><a href="#cp-指令" class="headerlink" title="cp 指令"></a>cp 指令</h2><h3 id="语法-7"><a href="#语法-7" class="headerlink" title="语法"></a>语法</h3><p>cp [选项] 源文件或目录 目标文件或目录</p>
-<h3 id="功能-6"><a href="#功能-6" class="headerlink" title="功能"></a>功能</h3><p>复制文件或目录</p>
-<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>当目标为目录时，cp指令要求其必须存在；如果目标目录不存在，则会出现错误信息；且源文件或目录支持多个同时操作，但必须满足目标目录存在；</p>
-<h3 id="常用选项-6"><a href="#常用选项-6" class="headerlink" title="常用选项"></a>常用选项</h3><ol>
-<li>-f 或 –force：强制复制文件或目录，而不论目标文件或目录是否存在；</li>
-<li>-i 或 –interative：覆盖文件之前先询问用户；</li>
-<li>-r：递归处理，将指定目录下的文件与子目录一并处理；</li>
-<li>-R 或 –recursive：递归处理，同上；</li>
+<p>如果连ISP的DNS服务器缓存里也没有，就会触发一个<strong>完整的递归查询</strong>：</p>
+<p>a.  <strong>ISP的DNS服务器</strong> 会向 <strong>根域名服务器 (Root DNS Server)</strong> 发起请求：“请问<code>.com</code>域名的顶级域名(TLD)服务器地址是什么？”<br>b.  <strong>根服务器</strong> 回复：“<code>.com</code>的TLD服务器地址是xxx。”<br>c.  <strong>ISP的DNS服务器</strong> 接着向 <strong><code>.com</code> TLD服务器</strong> 发起请求：“请问 <code>example.com</code> 的权威域名服务器(Authoritative Name Server)地址是什么？”<br>d.  <strong>TLD服务器</strong> 回复：“<code>example.com</code>的权威域名服务器地址是yyy。”<br>e.  <strong>ISP的DNS服务器</strong> 最后向 <strong><code>example.com</code>的权威域名服务器</strong> 发起请求：“请问 <code>www.example.com</code> 的IP地址是什么？”<br>f.  <strong>权威服务器</strong> 给出最终的IP地址。<br>g.  <strong>ISP的DNS服务器</strong> 拿到IP地址后，返回给操作系统，操作系统再返回给浏览器，并各级都会将这个对应关系<strong>缓存</strong>起来，以便下次快速访问（缓存时间由TTL值决定）。</p>
+<p>至此，浏览器终于拿到了目标服务器的IP地址。</p>
+<h2 id="步骤二：建立连接-Connection-打通通信管道"><a href="#步骤二：建立连接-Connection-打通通信管道" class="headerlink" title="步骤二：建立连接 (Connection) - 打通通信管道"></a>步骤二：建立连接 (Connection) - 打通通信管道</h2><h3 id="建立TCP连接-Establishing-a-TCP-Connection"><a href="#建立TCP连接-Establishing-a-TCP-Connection" class="headerlink" title="建立TCP连接 (Establishing a TCP Connection)"></a>建立TCP连接 (Establishing a TCP Connection)</h3><p>HTTP协议是构建在TCP&#x2F;IP协议之上的。为了保证数据传输的可靠性，浏览器需要和服务器通过<strong>TCP三次握手 (Three-way Handshake)</strong> 建立连接。</p>
+<ol>
+<li><strong>第一次握手 (SYN)</strong>：浏览器（客户端）向服务器发送一个<code>SYN</code>报文，表示“你好，我想和你建立连接”。</li>
+<li><strong>第二次握手 (SYN+ACK)</strong>：服务器收到后，返回一个<code>SYN+ACK</code>报文，表示“好的，我收到了，我也准备好了”。</li>
+<li><strong>第三次握手 (ACK)</strong>：浏览器收到后，再发送一个<code>ACK</code>报文，表示“收到了，那我们开始通信吧”。</li>
 </ol>
-<h2 id="mv指令"><a href="#mv指令" class="headerlink" title="mv指令"></a>mv指令</h2><h3 id="语法-8"><a href="#语法-8" class="headerlink" title="语法"></a>语法</h3><p>mv [选项] 源文件或目录 目标文件或目录</p>
-<h3 id="功能-7"><a href="#功能-7" class="headerlink" title="功能"></a>功能</h3><ol>
-<li>重命名</li>
-<li>移动</li>
-<li>支持多个源文件或目录同时操作</li>
+<p>握手成功后，一个可靠的TCP连接就建立好了。</p>
+<h3 id="TLS握手-TLS-Handshake-如果是HTTPS"><a href="#TLS握手-TLS-Handshake-如果是HTTPS" class="headerlink" title="TLS握手 (TLS Handshake) - 如果是HTTPS"></a>TLS握手 (TLS Handshake) - 如果是HTTPS</h3><p>如果你的URL是<code>HTTPS</code>开头的，那么在TCP连接建立之后，还需要进行一个<strong>TLS (Transport Layer Security)</strong> 握手过程，以建立一个加密信道。这个过程比TCP握手复杂得多：</p>
+<ol>
+<li><strong>Client Hello</strong>：浏览器发送支持的TLS版本、加密套件列表和一个随机数。</li>
+<li><strong>Server Hello：服务器选择一个加密套件，返回它的</strong>SSL证书**（包含了服务器的公钥）和另一个随机数。</li>
+<li><strong>证书验证 (Certificate Verification)</strong>：浏览器会验证服务器的证书是否由受信任的证书颁发机构（CA）签发、是否过期、域名是否匹配。如果验证失败，浏览器会显示一个“不安全”的警告。</li>
+<li><strong>密钥交换 (Key Exchange)</strong>：浏览器生成第三个随机数（预主密钥），用服务器的<strong>公钥</strong>加密后发送给服务器。</li>
+<li><strong>生成会话密钥 (Session Key Generation)</strong>：服务器用自己的<strong>私钥</strong>解密，得到预主密钥。现在，客户端和服务器都拥有了三个相同的随机数，它们使用这三个数通过一个约定好的算法，各自独立地生成一个完全相同的<strong>对称会话密钥</strong>。</li>
+<li><strong>握手完成 (Finished)</strong>：双方互相发送一个“Finished”消息，用刚刚生成的会话密钥加密。如果双方都能解密对方的消息，则TLS握手成功。</li>
 </ol>
-<h3 id="常用选项-7"><a href="#常用选项-7" class="headerlink" title="常用选项"></a>常用选项</h3><ol>
-<li>-f：强制执行，如果目标文件已经存在，则不会询问而直接覆盖；</li>
-<li>-i：若目标文件已经存在，会询问是否覆盖；</li>
+<p>此后，所有浏览器和服务器之间的HTTP通信都会使用这个<strong>对称会话密钥</strong>进行加密和解密，确保了数据的机密性和完整性。</p>
+<h2 id="步骤三：请求与响应-Request-Response-数据交换"><a href="#步骤三：请求与响应-Request-Response-数据交换" class="headerlink" title="步骤三：请求与响应 (Request &amp; Response) - 数据交换"></a>步骤三：请求与响应 (Request &amp; Response) - 数据交换</h2><h3 id="发送HTTP请求-Sending-HTTP-Request"><a href="#发送HTTP请求-Sending-HTTP-Request" class="headerlink" title="发送HTTP请求 (Sending HTTP Request)"></a>发送HTTP请求 (Sending HTTP Request)</h3><p>现在，安全的通信管道已经打通，浏览器会构建并发送一个HTTP请求报文。一个典型的GET请求报文包含：</p>
+<ul>
+<li><strong>请求行 (Request Line)</strong>: <code>GET /path/to/page HTTP/1.1</code> (请求方法、请求路径、协议版本)</li>
+<li><strong>请求头 (Request Headers)</strong>: 包含许多键值对信息，例如：<ul>
+<li><code>Host: www.example.com</code> (目标主机)</li>
+<li><code>User-Agent: Mozilla/5.0 ...</code> (浏览器身份标识)</li>
+<li><code>Accept: text/html,application/xhtml+xml,...</code> (浏览器能接收的内容类型)</li>
+<li><code>Accept-Language: zh-CN,zh;q=0.9</code> (偏好的语言)</li>
+<li><code>Cookie: name=value;...</code> (携带之前服务器设置的Cookie)</li>
+<li><code>Connection: keep-alive</code> (表示希望保持TCP连接，以便后续请求复用)</li>
+</ul>
+</li>
+<li><strong>请求体 (Request Body)</strong>: 对于<code>GET</code>请求，请求体通常是空的。对于<code>POST</code>请求，这里会包含要提交的数据（如表单信息）。</li>
+</ul>
+<h3 id="服务器处理请求并返回响应-Server-Processing-Response"><a href="#服务器处理请求并返回响应-Server-Processing-Response" class="headerlink" title="服务器处理请求并返回响应 (Server Processing &amp; Response)"></a>服务器处理请求并返回响应 (Server Processing &amp; Response)</h3><ul>
+<li><strong>服务器接收请求</strong>：Web服务器（如 Nginx, Apache）接收到这个HTTP请求。</li>
+<li><strong>处理请求</strong>：服务器可能会将请求转交给一个应用服务器（如 Node.js, Tomcat, PHP），后者会执行相应的业务逻辑，比如查询数据库、生成动态内容等。</li>
+<li><strong>构建响应</strong>：服务器处理完毕后，会构建一个HTTP响应报文。响应报文包含：<ul>
+<li><strong>状态行 (Status Line)</strong>: <code>HTTP/1.1 200 OK</code> (协议版本、状态码、状态描述)。常见的状态码有：<ul>
+<li><code>200 OK</code>: 请求成功。</li>
+<li><code>301 Moved Permanently</code>: 永久重定向，浏览器会自动跳转到新地址。</li>
+<li><code>304 Not Modified</code>: 资源未修改，浏览器可以使用本地缓存。</li>
+<li><code>404 Not Found</code>: 服务器上没有找到请求的资源。</li>
+<li><code>500 Internal Server Error</code>: 服务器内部错误。</li>
+</ul>
+</li>
+<li><strong>响应头 (Response Headers)</strong>: 包含服务器信息和数据描述，例如：<ul>
+<li><code>Content-Type: text/html; charset=utf-8</code> (响应内容的类型和编码，非常重要！)</li>
+<li><code>Content-Length: 1234</code> (响应体的大小)</li>
+<li><code>Set-Cookie: new_cookie=value;...</code> (让浏览器保存一个新的Cookie)</li>
+<li><code>Cache-Control: max-age=3600</code> (告诉浏览器如何缓存这个资源)</li>
+</ul>
+</li>
+<li><strong>响应体 (Response Body)</strong>: 包含了请求的实际内容，对于网页请求来说，通常就是HTML源代码。</li>
+</ul>
+</li>
+</ul>
+<h3 id="连接关闭-Connection-Closing"><a href="#连接关闭-Connection-Closing" class="headerlink" title="连接关闭 (Connection Closing)"></a>连接关闭 (Connection Closing)</h3><p>如果请求头或响应头中包含了 <code>Connection: keep-alive</code>，那么这个TCP连接会保持一段时间，以便浏览器继续用它来请求页面中的CSS、JS、图片等资源。否则，连接会在此次响应后关闭（通过TCP四次挥手）。</p>
+<h2 id="步骤四：渲染-Rendering-从代码到图像"><a href="#步骤四：渲染-Rendering-从代码到图像" class="headerlink" title="步骤四：渲染 (Rendering) - 从代码到图像"></a>步骤四：渲染 (Rendering) - 从代码到图像</h2><p>浏览器终于拿到了HTML，但离看到五彩斑斓的页面还差最后一步。这是浏览器内核（Rendering Engine，如Chrome的Blink，Firefox的Gecko）的工作。</p>
+<h3 id="解析与构建-Parsing-Building-Trees"><a href="#解析与构建-Parsing-Building-Trees" class="headerlink" title="解析与构建 (Parsing &amp; Building Trees)"></a>解析与构建 (Parsing &amp; Building Trees)</h3><ol>
+<li><strong>构建DOM树 (DOM Tree)</strong>：浏览器从上到下解析HTML文档，将HTML标签转换成一个树形结构的对象模型，即<strong>文档对象模型 (Document Object Model)</strong>。<code>&lt;html&gt;</code>是根节点，<code>&lt;body&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>等都是它的子节点。</li>
+<li><strong>构建CSSOM树 (CSSOM Tree)</strong>：在解析HTML的过程中，如果遇到<code>&lt;link&gt;</code>标签引用外部CSS文件，或者<code>&lt;style&gt;</code>标签里的内联CSS，浏览器会<strong>异步下载</strong>并解析这些CSS，构建一个类似的树形结构，即<strong>CSS规则对象模型 (CSS Object Model)</strong>。</li>
+<li><strong>执行JavaScript</strong>：如果遇到<code>&lt;script&gt;</code>标签，HTML解析会<strong>暂停</strong>（默认情况下），浏览器会立即下载、解析并执行JavaScript代码。JS代码可能会修改DOM和CSSOM（例如 <code>document.getElementById(&#39;...&#39;).style.color = &#39;red&#39;</code>）。这就是为什么通常建议把<code>&lt;script&gt;</code>标签放在<code>&lt;body&gt;</code>底部，以避免阻塞页面主要内容的显示。<ul>
+<li><code>async</code> 和 <code>defer</code> 属性可以改变JS的加载和执行行为，避免阻塞。</li>
+</ul>
+</li>
 </ol>
-<h2 id="cat指令"><a href="#cat指令" class="headerlink" title="cat指令"></a>cat指令</h2><p>用于查看目标文件内容</p>
-<h3 id="常用选项-8"><a href="#常用选项-8" class="headerlink" title="常用选项"></a>常用选项</h3><ol>
-<li>-b：对非空输出行编号；</li>
-<li>-n：对输出的所有行编号</li>
-<li>-s：不输出多行空行；</li>
+<h3 id="渲染过程-Rendering-Process"><a href="#渲染过程-Rendering-Process" class="headerlink" title="渲染过程 (Rendering Process)"></a>渲染过程 (Rendering Process)</h3><ol>
+<li><strong>构建渲染树 (Render Tree)</strong>：浏览器将DOM树和CSSOM树结合起来，生成<strong>渲染树</strong>。渲染树只包含需要显示的节点及其样式信息（比如<code>display: none</code>的节点就不会出现在渲染树中）。</li>
+<li><strong>布局 (Layout &#x2F; Reflow)</strong>：浏览器根据渲染树，计算出每个节点在屏幕上的确切位置和大小（几何信息）。这个过程也叫<strong>回流 (Reflow)</strong>。</li>
+<li><strong>绘制 (Painting &#x2F; Repaint)</strong>：布局完成后，浏览器将每个节点转换成屏幕上的实际像素。这个过程会调用底层的图形API来完成，也叫<strong>重绘 (Repaint)</strong>。</li>
+<li><strong>合成 (Compositing)</strong>：现代浏览器为了优化性能，会将页面分成多个图层（Layers）。一些复杂的动画或变换（如<code>transform</code>, <code>opacity</code>）可以直接在GPU上进行图层合成，而不需要重新布局和绘制，从而大大提高性能。</li>
 </ol>
+<h3 id="持续加载"><a href="#持续加载" class="headerlink" title="持续加载"></a>持续加载</h3><p>在初步渲染出页面框架后，浏览器会继续加载HTML中引用的其他资源，如图片 (<code>&lt;img&gt;</code>)、字体等。这些资源加载完成后，可能会引起部分区域的<strong>回流</strong>和<strong>重绘</strong>，最终完整地显示出整个页面。</p>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>整个过程可以总结为：</p>
+<ol>
+<li><strong>输入与解析URL</strong>：浏览器理解你的意图。</li>
+<li><strong>DNS查询</strong>：将域名转换为IP地址。</li>
+<li><strong>TCP&#x2F;TLS握手</strong>：与服务器建立安全连接。</li>
+<li><strong>发送HTTP请求</strong>：告诉服务器我想要什么。</li>
+<li><strong>服务器响应</strong>：返回HTML等资源。</li>
+<li><strong>浏览器渲染</strong>：<ul>
+<li>解析HTML -&gt; <strong>DOM树</strong></li>
+<li>解析CSS -&gt; <strong>CSSOM树</strong></li>
+<li>DOM + CSSOM -&gt; <strong>渲染树</strong></li>
+<li>计算布局 (<strong>Layout</strong>)</li>
+<li>绘制像素 (<strong>Paint</strong>)</li>
+<li>合成图层 (<strong>Composite</strong>)</li>
+</ul>
+</li>
+</ol>
+<p>每一步都充满了复杂的细节和优化策略，共同造就了我们今天流畅、丰富的Web体验。希望这个详细的解释对你有帮助！</p>
 
 		</div>
 
@@ -561,18 +512,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> Linux的基本指令</li>
+        <li><strong>标题:</strong> </li>
         <li><strong>作者:</strong> The Redefine Team</li>
         <li><strong>创建于
-                :</strong> 2025-05-31 00:00:00</li>
+                :</strong> 2025-06-27 00:38:57</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-05-31 01:16:48
+                    :</strong> 2025-06-27 00:32:25
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2025/05/31/Linux基本指令/
+            <strong>链接:</strong> https://redefine.ohevan.com/2025/06/27/从网址到页面/
         </li>
         <li>
             <strong>
@@ -591,37 +542,17 @@
 		
 
 		
-		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
-			
-			<li class="tag-item mx-0.5">
-				<a href="/tags/Linux/">#Linux</a>&nbsp;
-			</li>
-			
-		</ul>
-		
 
 		
 
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2025/06/27/%E4%BB%8E%E7%BD%91%E5%9D%80%E5%88%B0%E9%A1%B5%E9%9D%A2/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item"></span>
-						<span class="post-nav-item">上一篇</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2025/05/20/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+				<a class="next" rel="next" href="/2025/05/31/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">设计模式——单例模式</span>
+						<span class="post-nav-title-item">Linux的基本指令</span>
 						<span class="post-nav-item">下一篇</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -685,8 +616,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">Linux的基本指令</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4"><span class="nav-text">Linux的基本指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ls-%E6%8C%87%E4%BB%A4"><span class="nav-text">1. ls 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-%EF%BC%9A"><span class="nav-text">语法 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-%EF%BC%9A"><span class="nav-text">功能 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9"><span class="nav-text">常用选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-GID%EF%BC%88Group-ID%EF%BC%89"><span class="nav-text">2. GID（Group ID）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-pwd-%E5%91%BD%E4%BB%A4"><span class="nav-text">2. pwd 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD"><span class="nav-text">功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-cd-%E6%8C%87%E4%BB%A4"><span class="nav-text">3. cd 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-1"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-1"><span class="nav-text">功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B"><span class="nav-text">举例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-touch-%E6%8C%87%E4%BB%A4"><span class="nav-text">4. touch 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-2"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-2"><span class="nav-text">功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9-1"><span class="nav-text">常用选项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-mkdir-%E6%8C%87%E4%BB%A4"><span class="nav-text">5. mkdir 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-3"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-3"><span class="nav-text">功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9-2"><span class="nav-text">常用选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B-1"><span class="nav-text">举例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-rmdir-%E6%8C%87%E4%BB%A4-rm-%E6%8C%87%E4%BB%A4"><span class="nav-text">6. rmdir 指令 &amp;&amp; rm 指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rmdir"><span class="nav-text">rmdir</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-4"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%AF%B9%E8%B1%A1"><span class="nav-text">适用对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-4"><span class="nav-text">功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9-3"><span class="nav-text">常用选项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rm"><span class="nav-text">rm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-5"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%AF%B9%E8%B1%A1-1"><span class="nav-text">适用对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-5"><span class="nav-text">功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9-4"><span class="nav-text">常用选项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-man%E6%8C%87%E4%BB%A4"><span class="nav-text">7. man指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-6"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9-5"><span class="nav-text">常用选项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#man%E6%89%8B%E5%86%8C%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-text">man手册的内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp-%E6%8C%87%E4%BB%A4"><span class="nav-text">cp 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-7"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-6"><span class="nav-text">功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-text">说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9-6"><span class="nav-text">常用选项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mv%E6%8C%87%E4%BB%A4"><span class="nav-text">mv指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-8"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD-7"><span class="nav-text">功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9-7"><span class="nav-text">常用选项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cat%E6%8C%87%E4%BB%A4"><span class="nav-text">cat指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9-8"><span class="nav-text">常用选项</span></a></li></ol></li></ol></li></ol>
+		<div class="page-title"></div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E8%BE%93%E5%85%A5%E7%BD%91%E5%9D%80%E5%88%B0%E6%98%BE%E7%A4%BA%E9%A1%B5%E9%9D%A2"><span class="nav-text">从输入网址到显示页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%A7%88%EF%BC%9A%E6%A0%B8%E5%BF%83%E5%9B%9B%E5%A4%A7%E6%AD%A5%E9%AA%A4"><span class="nav-text">概览：核心四大步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%EF%BC%9A%E5%AF%BC%E8%88%AA%EF%BC%88Navigation%EF%BC%89-%E4%BB%8E%E8%BE%93%E5%85%A5%E5%88%B0%E5%AF%BB%E5%9D%80"><span class="nav-text">步骤一：导航（Navigation） - 从输入到寻址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5-Input-Handling"><span class="nav-text">处理用户输入 (Input Handling)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL%E8%A7%A3%E6%9E%90-URL-Parsing"><span class="nav-text">URL解析 (URL Parsing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS%E6%9F%A5%E8%AF%A2-DNS-Lookup-%E6%A0%B8%E5%BF%83%E4%B8%AD%E7%9A%84%E6%A0%B8%E5%BF%83"><span class="nav-text">DNS查询 (DNS Lookup) - 核心中的核心</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C%EF%BC%9A%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5-Connection-%E6%89%93%E9%80%9A%E9%80%9A%E4%BF%A1%E7%AE%A1%E9%81%93"><span class="nav-text">步骤二：建立连接 (Connection) - 打通通信管道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8BTCP%E8%BF%9E%E6%8E%A5-Establishing-a-TCP-Connection"><span class="nav-text">建立TCP连接 (Establishing a TCP Connection)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TLS%E6%8F%A1%E6%89%8B-TLS-Handshake-%E5%A6%82%E6%9E%9C%E6%98%AFHTTPS"><span class="nav-text">TLS握手 (TLS Handshake) - 如果是HTTPS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%89%EF%BC%9A%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94-Request-Response-%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2"><span class="nav-text">步骤三：请求与响应 (Request &amp; Response) - 数据交换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E9%80%81HTTP%E8%AF%B7%E6%B1%82-Sending-HTTP-Request"><span class="nav-text">发送HTTP请求 (Sending HTTP Request)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A4%84%E7%90%86%E8%AF%B7%E6%B1%82%E5%B9%B6%E8%BF%94%E5%9B%9E%E5%93%8D%E5%BA%94-Server-Processing-Response"><span class="nav-text">服务器处理请求并返回响应 (Server Processing &amp; Response)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E5%85%B3%E9%97%AD-Connection-Closing"><span class="nav-text">连接关闭 (Connection Closing)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E5%9B%9B%EF%BC%9A%E6%B8%B2%E6%9F%93-Rendering-%E4%BB%8E%E4%BB%A3%E7%A0%81%E5%88%B0%E5%9B%BE%E5%83%8F"><span class="nav-text">步骤四：渲染 (Rendering) - 从代码到图像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%9E%84%E5%BB%BA-Parsing-Building-Trees"><span class="nav-text">解析与构建 (Parsing &amp; Building Trees)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B-Rendering-Process"><span class="nav-text">渲染过程 (Rendering Process)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%81%E7%BB%AD%E5%8A%A0%E8%BD%BD"><span class="nav-text">持续加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol></li></ol>
 
 	</div>
 </div>
